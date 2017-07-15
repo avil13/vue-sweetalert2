@@ -5,9 +5,9 @@ const VueSweetalert2 = function() {};
 
 VueSweetalert2.install = function(Vue, options) {
     // 1. добавление глобального метода или свойства
-    // Vue.myGlobalMethod = function() {
-    //         // некоторая логика ...
-    //     }
+    Vue.swal = function(...args) {
+        swal.apply(this, args);
+    };
     //     // 2. добавление глобального объекта
     // Vue.directive('my-directive', {
     //         bind(el, binding, vnode, oldVnode) {

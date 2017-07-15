@@ -23,7 +23,7 @@ Vue.use(VueSweetalert2);
 Now in the global object, you can access all the methods of [sweetalret2](https://github.com/limonte/sweetalert2).
 
 
-example-vue-component.vue
+// example-vue-component.vue
 ```
 <template>
     <button v-on:click="showAlert">Hello world</button>
@@ -42,6 +42,11 @@ export default {
     }
 }
 </script>
+```
+
+// Or
+```
+Vue.swal('Hello Vue world!!!');
 ```
 
 
