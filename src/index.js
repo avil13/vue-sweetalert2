@@ -1,7 +1,7 @@
 import swal from 'sweetalert2';
-import '~sweetalert2/dist/sweetalert2.min.css';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
-VueSweetalert2 = {};
+const VueSweetalert2 = function() {};
 
 VueSweetalert2.install = function(Vue, options) {
     // 1. добавление глобального метода или свойства
@@ -26,7 +26,7 @@ VueSweetalert2.install = function(Vue, options) {
 
     // 4. добавление метода экземпляра
     Vue.prototype.$swal = function(...args) {
-        swal.apply(null, args);
+        swal.apply(this, args);
     };
 };
 
