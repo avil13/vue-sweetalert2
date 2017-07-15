@@ -1,20 +1,24 @@
 {
-  "name": "vue-sweetalert2",
-  "version": "1.0.3",
-  "description": "",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "sweetalert",
-    "sweetalert2",
-    "alert",
-    "prompt"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "sweetalert2": "^6.6.6"
-  }
+    "name": "vue-sweetalert2",
+    "version": "1.0.4",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "sweetalert",
+        "sweetalert2",
+        "alert",
+        "prompt"
+    ],
+    "author": "Aleksey Pivkin",
+    "license": "ISC",
+    "dependencies": {
+        "sweetalert2": "^6.6.6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/avil13/vue-sweetalert2.git"
+    }
 }
