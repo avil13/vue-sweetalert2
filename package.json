@@ -1,7 +1,7 @@
 {
     "name": "vue-sweetalert2",
-    "version": "1.0.8",
-    "description": "",
+    "version": "1.1.0",
+    "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
     "author": "Aleksey Pivkin",
     "license": "ISC",
     "dependencies": {
-        "sweetalert2": "^6.6.6"
+        "sweetalert2": "^7.0.9"
     },
     "repository": {
         "type": "git",

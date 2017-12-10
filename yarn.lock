@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-sweetalert2@^6.6.6:
-  version "6.6.6"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-6.6.6.tgz#3630279d98f04fb8b89f2e8b098fc42f03bcb555"
-
-vue@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.4.1.tgz#76e0b8eee614613532216b7bfe784e0b5695b160"
+sweetalert2@^7.0.9:
+  version "7.0.9"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.0.9.tgz#04ec97379d7d5c6d210b27f25453d650e5492b27"
