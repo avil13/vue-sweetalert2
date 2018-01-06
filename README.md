@@ -50,4 +50,4 @@ Vue.swal('Hello Vue world!!!');
 ```
 
 
-The documentation for sweetalert2, you can find [here](https://limonte.github.io/sweetalert2/).
+The documentation for sweetalert2, you can find [here](https://sweetalert.js.org/).
