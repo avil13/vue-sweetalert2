@@ -2,19 +2,24 @@
 
 A convenient wrapper for sweetalert2.
 
+![VueSweetalert2](assets/logo.png)
+
+
 ### Get started
 
-```
+
+```bash
 npm install -S vue-sweetalert2
 ```
 or
-```
+```bash
 yarn add vue-sweetalert2
 ```
 
 
 // main.js
-```
+```JavaScript
+import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
 
 Vue.use(VueSweetalert2);
@@ -24,7 +29,7 @@ Now in the global object, you can access all the methods of [sweetalret2](https:
 
 
 // example-vue-component.vue
-```
+```html
 <template>
     <button v-on:click="showAlert">Hello world</button>
 </template>
@@ -45,7 +50,7 @@ export default {
 ```
 
 // Or
-```
+```JavaScript
 Vue.swal('Hello Vue world!!!');
 ```
 
