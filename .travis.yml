@@ -1,0 +1,19 @@
+language: node_js
+dist: trusty
+node_js: 8.9
+
+before_install:
+  - yarn global add greenkeeper-lockfile@1
+
+before_script:
+  - greenkeeper-lockfile-update
+
+script:
+  - yarn test
+
+after_script:
+  - greenkeeper-lockfile-upload
+
+notifications:
+  email:
+    on_success: never
