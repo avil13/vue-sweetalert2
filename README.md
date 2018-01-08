@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sweetalert2/vue-sweetalert2.svg?branch=master)](https://travis-ci.org/sweetalert2/vue-sweetalert2)
 
-A convenient wrapper for sweetalert2.
+Official wrapper for sweetalert2.
 
 ![VueSweetalert2](assets/logo.png)
 
