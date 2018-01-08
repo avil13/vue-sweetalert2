@@ -12,7 +12,7 @@
         "alert",
         "prompt"
     ],
-    "author": "Aleksey Pivkin",
+    "author": "Aleksey Pivkin @avil13",
     "license": "ISC",
     "dependencies": {
         "sweetalert2": "^7.3.4"
