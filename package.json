@@ -4,7 +4,7 @@
     "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest"
     },
     "keywords": [
         "sweetalert",
@@ -13,12 +13,33 @@
         "prompt"
     ],
     "author": "Aleksey Pivkin @avil13",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "sweetalert2": "^7.3.4"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
+    },
+    "devDependencies": {
+        "babel-jest": "^22.0.4",
+        "babel-preset-env": "^1.6.1",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^22.0.4",
+        "vue": "^2.5.13"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "css"
+        ],
+        "transform": {
+            "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+        },
+        "moduleNameMapper": {
+            "^.+\\.css$": "identity-obj-proxy"
+        },
+        "mapCoverage": true
     }
 }
