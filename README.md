@@ -1,10 +1,9 @@
 # vue-sweetalert2
 
+[![Build Status](https://travis-ci.org/sweetalert2/vue-sweetalert2.svg?branch=master)](https://travis-ci.org/sweetalert2/vue-sweetalert2)
 [![Greenkeeper badge](https://badges.greenkeeper.io/sweetalert2/vue-sweetalert2.svg)](https://greenkeeper.io/)
 
-[![Build Status](https://travis-ci.org/sweetalert2/vue-sweetalert2.svg?branch=master)](https://travis-ci.org/sweetalert2/vue-sweetalert2)
-
-Official wrapper for sweetalert2.
+Official Vue.js wrapper for SweetAlert2.
 
 ![VueSweetalert2](assets/logo.png)
 
