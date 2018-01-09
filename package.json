@@ -1,6 +1,6 @@
 {
     "name": "vue-sweetalert2",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
     "scripts": {
@@ -15,7 +15,7 @@
     "author": "Aleksey Pivkin @avil13",
     "license": "MIT",
     "dependencies": {
-        "sweetalert2": "^7.3.4"
+        "sweetalert2": "7.x"
     },
     "repository": {
         "type": "git",
