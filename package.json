@@ -19,7 +19,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/avil13/vue-sweetalert2.git"
+        "url": "git+https://github.com/sweetalert2/vue-sweetalert2.git"
     },
     "devDependencies": {
         "babel-jest": "^22.0.4",
