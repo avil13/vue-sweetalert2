@@ -27,7 +27,7 @@ import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2);
 ```
 
-Now in the global object, you can access all the methods of [sweetalret2](https://github.com/limonte/sweetalert2).
+Now in the global object, you can access all the methods of [sweetalert2](https://github.com/limonte/sweetalert2).
 
 
 // example-vue-component.vue
