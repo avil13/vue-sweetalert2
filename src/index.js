@@ -18,3 +18,4 @@ VueSweetalert2.install = function(Vue) {
 
 
 export default VueSweetalert2;
+
