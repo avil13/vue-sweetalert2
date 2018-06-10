@@ -6,3 +6,5 @@ declare module 'vue/types/vue' {
     }
     swal: swal;
 }
+
+let VueSweetalert2 = swal;
