@@ -3,7 +3,7 @@
     "version": "1.4.0",
     "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
-    "types": "./src/index.d.ts",
+    "types": "src/index.d.ts",
     "scripts": {
         "test": "jest"
     },
@@ -25,10 +25,14 @@
     "devDependencies": {
         "babel-jest": "^22.0.4",
         "babel-preset-env": "^1.7.0",
+        "eslint-plugin-import": "^2.12.0",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^22.0.4",
         "vue": "^2.5.16"
     },
+    "files": [
+        "src"
+    ],
     "jest": {
         "moduleFileExtensions": [
             "js",

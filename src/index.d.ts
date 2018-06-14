@@ -1,10 +1,22 @@
-import { swal } from 'sweetalert2';
+// import swal from 'sweetalert2';
+
+import Vue, { PluginObject, PluginFunction } from 'vue';
+
 
 declare module 'vue/types/vue' {
     interface Vue {
-        $swal: swal;
+        $swal: () => Promise<any>;
     }
-    swal: swal;
 }
 
-let VueSweetalert2 = swal;
+declare module 'vue/types/options' {
+    interface ComponentOptions<V extends Vue> {
+        swal?: () => Promise<any>;
+    }
+}
+
+//
+
+declare let VueSweetalert2: (Vue, options?: any) => void;
+
+export default VueSweetalert2;
