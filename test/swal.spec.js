@@ -16,7 +16,12 @@ describe('Vue-SweetAlert2', () => {
 
     it('this.$swal', () => {
         const vm = new Vue({});
-        
+
         expect(vm.$swal).toBeInstanceOf(Function);
+    });
+
+    // No toast
+    it('Vue.toast', () => {
+        expect(Vue.toast).toBeUndefined()
     });
 });
