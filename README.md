@@ -6,10 +6,13 @@ Vue.js wrapper for SweetAlert2.
 
 ![VueSweetalert2](assets/logo.png)
 
-[Demo](https://avil13.github.io/vue-sweetalert2/)
+### [Demo](https://avil13.github.io/vue-sweetalert2/)
 
+![vue-sweetalert2 demo](assets/vue-sweetalert2.gif)
 
-### Get started
+---
+
+## Get started
 
 
 ```bash
@@ -55,4 +58,4 @@ Vue.swal('Hello Vue world!!!');
 ```
 
 
-The documentation for sweetalert2, you can find [here](https://sweetalert2.github.io/).
+### The documentation for sweetalert2, you can find [here](https://sweetalert2.github.io/).
