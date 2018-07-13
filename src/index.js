@@ -13,27 +13,6 @@ VueSweetalert2.install = function(Vue, options = { toast: false }) {
             return swal;
         }
     });
-
-    //  Make toast function
-    if (options.toast && (options.toast === true || typeof options.toast === 'object')) {
-        const toast_options = Object.assign(
-            {
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000
-            },
-            options.toast === true ? {} : options.toast
-        );
-
-        Vue.toast = swal.mixin(toast_options);
-
-        Object.defineProperty(Vue.prototype, '$toast', {
-            get: function get() {
-                return Vue.toast;
-            }
-        });
-    }
 };
 
 export default VueSweetalert2;

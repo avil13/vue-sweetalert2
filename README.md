@@ -13,10 +13,6 @@ Vue.js wrapper for SweetAlert2.
 ```bash
 npm install -S vue-sweetalert2
 ```
-or
-```bash
-yarn add vue-sweetalert2
-```
 
 
 // main.js
