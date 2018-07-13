@@ -30,6 +30,7 @@
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
+        "require-hacker": "^3.0.1",
         "vue": "^2.5.16"
     },
     "files": [
@@ -39,7 +40,8 @@
         "babel": "inherit",
         "require": [
             "babel-register",
-            "babel-polyfill"
+            "babel-polyfill",
+            "./ignore-utils"
         ]
     }
 }
