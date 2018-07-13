@@ -1,12 +1,5 @@
 {
-    "presets": [
-        ["env", { "modules": false }]
-    ],
-    "env": {
-        "test": {
-            "presets": [
-                ["env", { "targets": { "node": "current" } }]
-            ]
-        }
-    }
+  "presets": [
+    "env", "stage-3", "vue"
+  ]
 }

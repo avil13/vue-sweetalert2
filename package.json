@@ -5,7 +5,8 @@
     "main": "src/index.js",
     "types": "src/index.d.ts",
     "scripts": {
-        "test": "jest"
+        "test": "ava",
+        "test:watch": "ava --watch"
     },
     "keywords": [
         "sweetalert",
@@ -23,28 +24,24 @@
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
     },
     "devDependencies": {
-        "babel-jest": "^22.0.4",
+        "ava": "^0.25.0",
+        "babel-core": "^6.26.3",
+        "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.7.0",
-        "eslint-plugin-import": "^2.12.0",
-        "identity-obj-proxy": "^3.0.0",
-        "jest": "^22.0.4",
+        "babel-preset-stage-3": "^6.24.1",
+        "babel-preset-vue": "^2.0.2",
+        "require-hacker": "^3.0.1",
         "vue": "^2.5.16"
     },
     "files": [
         "src"
     ],
-    "jest": {
-        "moduleFileExtensions": [
-            "js",
-            "json",
-            "css"
-        ],
-        "transform": {
-            "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
-        },
-        "moduleNameMapper": {
-            "^.+\\.css$": "identity-obj-proxy"
-        },
-        "mapCoverage": true
+    "ava": {
+        "babel": "inherit",
+        "require": [
+            "babel-register",
+            "babel-polyfill",
+            "./ignore-utils"
+        ]
     }
 }
