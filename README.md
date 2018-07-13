@@ -6,6 +6,8 @@ Vue.js wrapper for SweetAlert2.
 
 ![VueSweetalert2](assets/logo.png)
 
+[Demo](https://avil13.github.io/vue-sweetalert2/)
+
 
 ### Get started
 
