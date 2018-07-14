@@ -8,7 +8,9 @@ Vue.js wrapper for SweetAlert2.
 
 ### [Demo](https://avil13.github.io/vue-sweetalert2/)
 
-![vue-sweetalert2 demo](assets/vue-sweetalert2.gif)
+<div style="text-align:center">
+<img src="assets/vue-sweetalert2.gif" align="center" alt="vue-sweetalert2 demo">
+</div>
 
 ---
 
