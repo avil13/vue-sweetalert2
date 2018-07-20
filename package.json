@@ -1,6 +1,6 @@
 {
     "name": "vue-sweetalert2",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
     "types": "src/index.d.ts",
@@ -12,7 +12,8 @@
         "sweetalert",
         "sweetalert2",
         "alert",
-        "prompt"
+        "prompt",
+        "ssr"
     ],
     "author": "Aleksey Pivkin @avil13",
     "license": "MIT",
