@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="container">
         <img src="./assets/logo.png" alt="vue sweetalert2" class="responsive">
-        <h1>{{ msg }}</h1>
+        <h1 class="h1">{{ msg }}</h1>
 
         <div class="row">
             <button @click="simple" class="btn btn-outline-primary col s12 m3" type="button">
@@ -101,7 +101,7 @@ a { color: #42b983; }
 .btn-outline-primary:disabled { background-color: transparent; color: #41b882; }
 
 /* */
-.responsive { width: 100%; height: auto; }
+.responsive { height: auto; min-width: auto; max-width: 100%;}
 .container{margin:0 auto;max-width:1280px;width:90%;}
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -117,6 +117,9 @@ a { color: #42b983; }
 }
 @media only screen and (min-width:993px){
     .container{width:70%;}
+}
+@media only screen and (max-width:800px){
+    .h1 { font-size: 4vw; margin-bottom: 20px;}
 }
 
 .row .col { box-sizing: border-box; margin: 2px 4px; min-height: 1px; padding: 0 12px; padding: 0 .75rem; }
