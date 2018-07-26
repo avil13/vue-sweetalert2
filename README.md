@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/avil13/vue-sweetalert2.svg?branch=master)](https://travis-ci.org/avil13/vue-sweetalert2)
 
-Vue.js wrapper for SweetAlert2.
+Vue.js wrapper for SweetAlert2. With support SSR.
 
 ![VueSweetalert2](assets/logo.png)
 
