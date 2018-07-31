@@ -9,7 +9,7 @@ var VueSweetalert2 = function() {};
 
 VueSweetalert2.install = function(Vue) {
     // 1. adding a global method or property
-    var _swal = isBrowser() ? swal : function() {};
+    var _swal = isBrowser() ? swal : function() { return Promise.resolve(); };
 
     Vue.swal = _swal;
 

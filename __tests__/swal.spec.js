@@ -9,12 +9,20 @@ test.beforeEach(t => {
 
 test('Vue-SweetAlert2', t => {
     t.is(typeof VueSweetalert2, 'function', 'Plugins exists')
-    
+
     t.is(typeof Vue.swal, 'function', 'Vue.swal')
+
+    const pr = Vue.swal('Test')
+
+    t.truthy(pr.then, 'return promise');
 });
 
 test('Vue-SweetAlert2 vm', t => {
     const vm = new Vue({});
 
     t.is(typeof vm.$swal, 'function', 'vm.swal')
+
+    const pr = vm.$swal('Test')
+
+    t.truthy(pr.then, 'return promise');
 });
