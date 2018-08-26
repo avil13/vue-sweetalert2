@@ -1,7 +1,8 @@
-import swal from 'sweetalert2';
+import { SweetAlertType } from 'sweetalert2';
 
 import Vue, { PluginObject, PluginFunction } from 'vue';
 
+function swal(title: string, message?: string, type?: SweetAlertType): Promise<any>;
 
 declare module 'vue/types/vue' {
     interface Vue {
@@ -17,17 +18,19 @@ declare module 'vue/types/options' {
 
 //
 
-declare let VueSweetalert2: (Vue, options?: VueSweetalert2Options) => void;
-
+declare let VueSweetalert2: (vue: Vue) => void;
 export default VueSweetalert2;
 
-export interface VueSweetalert2Options {
-    toast: boolean | VueSweetalert2ToastOptions;
-}
 
-export interface VueSweetalert2ToastOptions {
-    toast: boolean;
-    position: swal.SweetAlertOptions.position;
-    showConfirmButton: swal.SweetAlertOptions.showConfirmButton;
-    timer: swal.SweetAlertOptions.timer;
-}
+// declare let VueSweetalert2: (vue: Vue, options?: VueSweetalert2Options) => void;
+
+// export interface VueSweetalert2Options {
+//     toast: boolean | VueSweetalert2ToastOptions;
+// }
+
+// export interface VueSweetalert2ToastOptions {
+//     toast: boolean;
+//     position: swal.SweetAlertOptions.position;
+//     showConfirmButton: swal.SweetAlertOptions.showConfirmButton;
+//     timer: swal.SweetAlertOptions.timer;
+// }
