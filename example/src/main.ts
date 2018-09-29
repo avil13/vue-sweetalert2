@@ -3,9 +3,9 @@ import App from './App.vue'
 
 import VueSweetalert2 from '../../src';
 
-Vue.use(VueSweetalert2);
+// Vue.use(VueSweetalert2);
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+    el: '#app',
+    render: h => h(App)
 })
