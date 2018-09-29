@@ -1,8 +1,8 @@
-import { SweetAlertType } from 'sweetalert2';
-
+// import * as swal, { SweetAlertType } from 'sweetalert2';
 import Vue, { PluginObject, PluginFunction } from 'vue';
+import swal from 'sweetalert2';
 
-function swal(title: string, message?: string, type?: SweetAlertType): Promise<any>;
+// declare function swal(title: string, message?: string, type?: SweetAlertType): Promise<any>;
 
 declare module 'vue/types/vue' {
     interface Vue {
@@ -18,7 +18,7 @@ declare module 'vue/types/options' {
 
 //
 
-declare let VueSweetalert2: (vue: Vue) => void;
+declare let VueSweetalert2: PluginFunction<any>;
 export default VueSweetalert2;
 
 
