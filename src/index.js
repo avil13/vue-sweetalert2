@@ -15,11 +15,13 @@ VueSweetalert2.install = function(Vue) {
     Vue.swal = _swal;
 
     // 4. add the instance method
-    Object.defineProperty(Vue.prototype, '$swal', {
-        get: function get() {
-            return _swal
-        }
-    });
+    if (!Vue.prototype.hasOwnProperty('$swal')) {
+        Object.defineProperty(Vue.prototype, '$swal', {
+            get: function get() {
+                return _swal
+            }
+        });
+    }
 };
 
 export default VueSweetalert2;
