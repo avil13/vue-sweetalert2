@@ -23,18 +23,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+// import Vue from 'vue';
+// import Component from 'vue-class-component';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class AppComponent extends Vue {
     msg: string = 'Welcome to Vue-Sweetalert2 example'
 
-/*
+
     simple() {
         this.$swal('Hello world!');
     }
-
+// /*
     success() {
         this.$swal({
             type: 'success',

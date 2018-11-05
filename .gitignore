@@ -8,6 +8,8 @@ dist/
 npm-debug.log
 yarn-error.log
 
+yarn.lock
+
 # Editor directories and files
 .idea
 *.suo
