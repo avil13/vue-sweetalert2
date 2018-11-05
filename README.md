@@ -57,5 +57,23 @@ export default {
 Vue.swal('Hello Vue world!!!');
 ```
 
+## Nuxt.js
+
+Install dependencies:
+
+```bash
+npm install -S vue-sweetalert2
+```
+
+Add `vue-sweetalert2/nuxt` to modules section of `nuxt.config.js`
+
+```JavaScript
+{
+  modules: [
+    'vue-sweetalert2/nuxt'
+  ]
+}
+```
+
 
 ### The documentation for sweetalert2, you can find [here](https://sweetalert2.github.io/).
