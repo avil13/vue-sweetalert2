@@ -1,10 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 
 var is_production = (process.env.NODE_ENV === 'production');
-
 
 module.exports = {
     entry: './src/main.ts',
@@ -13,16 +13,11 @@ module.exports = {
         // publicPath: '/dist/',
         filename: 'build.js'
     },
-    mode: 'development',
+    mode: is_production ? 'production' : 'development',
     module: {
         rules: [
+            // Vue
             {
-                test: /\.css$/,
-                use: [
-                    'vue-style-loader',
-                    'css-loader'
-                ],
-            }, {
                 test: /\.vue$/,
                 loader: 'vue-loader'
             },
@@ -33,23 +28,34 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
-                loader: "ts-loader",
-                exclude: /node_modules/
+                loader: 'ts-loader',
+                options: {
+                    appendTsSuffixTo: [/\.vue$/]
+                }
             },
+            // assets
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]?[hash]'
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader'
+                ],
             }
         ]
     },
     resolve: {
         alias: {
+            // 'vue$': 'vue/dist/vue.common.js'
             'vue$': 'vue/dist/vue.esm.js'
         },
-        extensions: ['*', '.js', '.vue', '.json']
+        extensions: ['.js', '.ts', '.vue', '.json']
     },
     devServer: {
         historyApiFallback: true,
@@ -88,14 +94,24 @@ if (is_production) {
                 NODE_ENV: '"production"'
             }
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
         })
-    ])
+    ]);
+
+    module.exports.optimization = {
+        minimizer: [
+            // we specify a custom UglifyJsPlugin here to get source maps in production
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                    compress: false,
+                    ecma: 6,
+                    mangle: true
+                },
+                sourceMap: true
+            })
+        ]
+    }
 }

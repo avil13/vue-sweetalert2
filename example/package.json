@@ -13,13 +13,9 @@
     "gh": "npm run build && npm run gh-pages"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "vue": "^2.5.17",
+    "sweetalert2": "7.x"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -30,13 +26,19 @@
     "file-loader": "^1.1.4",
     "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "ts-loader": "^5.2.1",
+    "ts-loader": "^5.3.0",
     "typescript": "^3.1.1",
     "vue-class-component": "^6.2.0",
     "vue-loader": "^15.4.2",
+    "vue-property-decorator": "^7.2.0",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
