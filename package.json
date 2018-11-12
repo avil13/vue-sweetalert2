@@ -1,6 +1,6 @@
 {
     "name": "vue-sweetalert2",
-    "version": "1.5.7",
+    "version": "1.5.8",
     "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
     "types": "src/index.d.ts",
@@ -35,7 +35,8 @@
         "vue": "^2.5.16"
     },
     "files": [
-        "src"
+        "src",
+        "nuxt"
     ],
     "ava": {
         "babel": "inherit",
