@@ -30,6 +30,20 @@ Vue.use(VueSweetalert2);
 
 Now in the global object, you can access all the methods of [sweetalert2](https://github.com/limonte/sweetalert2).
 
+If you want to add global options like button colors, do something like this:
+// main.js
+```JavaScript
+import Vue from 'vue';
+import VueSweetalert2 from 'vue-sweetalert2';
+
+const options = {
+  confirmButtonColor: '#FFFFFF',
+  cancelButtonColor: '#000000'
+}
+
+Vue.use(VueSweetalert2, options)
+```
+
 
 // example-vue-component.vue
 ```html

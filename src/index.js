@@ -8,9 +8,9 @@ function isBrowser() {
 
 var VueSweetalert2 = function() {};
 
-VueSweetalert2.install = function(Vue) {
+VueSweetalert2.install = function(Vue, options) {
     // 1. adding a global method or property
-    var _swal = isBrowser() ? swal : function() { return Promise.resolve(); };
+    var _swal = isBrowser() ? swal.mixin(options) : function() { return Promise.resolve(); };
 
     Vue.swal = _swal;
 
