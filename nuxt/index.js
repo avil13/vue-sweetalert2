@@ -7,7 +7,7 @@ module.exports = function nuxtVueSweetalert2(moduleOptions) {
     this.addPlugin({
         src: resolve(__dirname, 'plugin.js'),
         fileName: 'vue-sweetalert2.js',
-        moduleOptions,
+        options: moduleOptions,
         ssr: false
     });
 }

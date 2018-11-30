@@ -89,5 +89,20 @@ Add `vue-sweetalert2/nuxt` to modules section of `nuxt.config.js`
 }
 ```
 
+Or pass in global options like this:
+
+```JavaScript
+{
+  modules: [
+    [
+      'vue-sweetalert2/nuxt',
+      {
+        confirmButtonColor: '#FFFFFF'
+      }
+    ]
+  ]
+}
+```
+
 
 ### The documentation for sweetalert2, you can find [here](https://sweetalert2.github.io/).
