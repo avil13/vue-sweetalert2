@@ -1,5 +1,5 @@
 import Vue, { PluginObject, PluginFunction } from 'vue';
-import * as swal from 'sweetalert2';
+import swal from 'sweetalert2';
 
 // declare function swal(title: string, message?: string, type?: SweetAlertType): Promise<any>;
 
