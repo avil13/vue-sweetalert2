@@ -3,17 +3,17 @@ import swal from 'sweetalert2';
 
 // declare function swal(title: string, message?: string, type?: SweetAlertType): Promise<any>;
 
-declare type swalFunc = swal;
+declare type swalFunc = typeof swal;
 
 declare module 'vue/types/vue' {
     interface Vue {
-        $swal: swal; // () => Promise<any>;
+        $swal: typeof swal; // () => Promise<any>;
     }
 }
 
 declare module 'vue/types/options' {
     interface ComponentOptions<V extends Vue> {
-        swal?: swal; // () => Promise<any>;
+        swal?: typeof swal; // () => Promise<any>;
     }
 }
 
