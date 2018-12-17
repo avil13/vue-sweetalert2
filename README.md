@@ -20,7 +20,7 @@ npm install -S vue-sweetalert2
 ```
 
 
-```JavaScript
+```js
 // main.js
 import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
@@ -31,7 +31,7 @@ Vue.use(VueSweetalert2);
 Now in the global object, you can access all the methods of [sweetalert2](https://github.com/limonte/sweetalert2).
 
 If you want to add global options like button colors, do something like this:
-```JavaScript
+```js
 // main.js
 import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
@@ -64,7 +64,7 @@ export default {
 ```
 
 // Or
-```JavaScript
+```js
 Vue.swal('Hello Vue world!!!');
 ```
 
@@ -78,7 +78,7 @@ npm install -S vue-sweetalert2
 
 Add `vue-sweetalert2/nuxt` to modules section of `nuxt.config.js`
 
-```JavaScript
+```js
 {
   modules: [
     'vue-sweetalert2/nuxt'
@@ -88,7 +88,7 @@ Add `vue-sweetalert2/nuxt` to modules section of `nuxt.config.js`
 
 Or pass in global options like this:
 
-```JavaScript
+```js
 {
   modules: [
     [
