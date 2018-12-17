@@ -48,8 +48,7 @@ export default class AppComponent extends Vue {
         this.$swal({
             type: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
-            footer: '<a href>Why do I have this issue?</a>'
+            text: 'Something went wrong!'
         });
     }
 

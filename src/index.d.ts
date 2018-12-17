@@ -1,9 +1,9 @@
 import Vue, { PluginObject, PluginFunction } from 'vue';
 import swal from 'sweetalert2';
 
-// declare function swal(title: string, message?: string, type?: SweetAlertType): Promise<any>;
-
-declare type swalFunc = typeof swal;
+declare interface swal {
+    mixin(options?: SweetAlertOptions): typeof swal;
+}
 
 declare module 'vue/types/vue' {
     interface Vue {

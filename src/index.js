@@ -1,4 +1,5 @@
 // @ts-check
+/** @type swal {import("sweetalert2")} */
 import swal from 'sweetalert2/dist/sweetalert2.min.js';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
@@ -6,11 +7,20 @@ function isBrowser() {
     return typeof window !== 'undefined';
 }
 
-var VueSweetalert2 = function() {};
+var VueSweetalert2 = function () {};
 
-VueSweetalert2.install = function(Vue, options) {
-    // 1. adding a global method or property
-    var _swal = isBrowser() ? swal.mixin(options) : function() { return Promise.resolve(); };
+
+VueSweetalert2.install = function (Vue, options) {
+    // adding a global method or property
+    var _swal;
+
+    if (isBrowser()) {
+        _swal = (options ? swal.mixin(options) : swal);
+    } else {
+        _swal = function () {
+            return Promise.resolve();
+        };
+    }
 
     Vue.swal = _swal;
 
