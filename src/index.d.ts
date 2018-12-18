@@ -1,5 +1,5 @@
 import Vue, { PluginObject, PluginFunction } from 'vue';
-import swal from 'sweetalert2';
+import swal, { SweetAlertOptions } from 'sweetalert2';
 
 declare interface swal {
     mixin(options?: SweetAlertOptions): typeof swal;
