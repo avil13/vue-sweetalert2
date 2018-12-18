@@ -24,7 +24,7 @@ VueSweetalert2.install = function (Vue, options) {
 
     Vue.swal = _swal;
 
-    // 4. add the instance method
+    // add the instance method
     if (!Vue.prototype.hasOwnProperty('$swal')) {
         Object.defineProperty(Vue.prototype, '$swal', {
             get: function get() {

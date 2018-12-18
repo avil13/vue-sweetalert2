@@ -27,6 +27,8 @@
 // import Component from 'vue-class-component';
 import { Component, Vue } from 'vue-property-decorator';
 
+Vue.use
+
 @Component
 export default class AppComponent extends Vue {
     msg: string = 'Welcome to Vue-Sweetalert2 example'
@@ -37,7 +39,7 @@ export default class AppComponent extends Vue {
     }
 // /*
     success() {
-        this.$swal({
+        Vue.swal({
             type: 'success',
             title: 'Hello',
             text: 'Hello brave new world!'
