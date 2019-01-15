@@ -1,6 +1,6 @@
 {
     "name": "vue-sweetalert2",
-    "version": "1.6.3",
+    "version": "1.6.4",
     "description": "Simple Vue sweetalert2 package",
     "main": "src/index.js",
     "types": "src/index.d.ts",
@@ -25,14 +25,14 @@
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
     },
     "devDependencies": {
-        "ava": "^0.25.0",
+        "ava": "^1.1.0",
         "babel-core": "^6.26.3",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
         "require-hacker": "^3.0.1",
-        "vue": "^2.5.16"
+        "vue": "^2.5.22"
     },
     "files": [
         "src",
