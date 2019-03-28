@@ -1,9 +1,9 @@
 {
     "name": "vue-sweetalert2",
-    "version": "1.6.4",
+    "version": "2.0.0",
     "description": "Simple Vue sweetalert2 package",
-    "main": "src/index.js",
-    "types": "src/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "test": "exit 0",
         "test:watch": "ava --watch"
@@ -18,7 +18,7 @@
     "author": "Aleksey Pivkin @avil13",
     "license": "MIT",
     "dependencies": {
-        "sweetalert2": "7.x"
+        "sweetalert2": "8.x"
     },
     "repository": {
         "type": "git",
@@ -32,6 +32,7 @@
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
         "require-hacker": "^3.0.1",
+        "typescript": "^3.3.3333",
         "vue": "^2.5.22"
     },
     "files": [
