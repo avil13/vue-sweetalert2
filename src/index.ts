@@ -1,7 +1,8 @@
 // @ts-check
 import Vue from 'vue';
 
-import Swal, { SweetAlertOptions } from 'sweetalert2/src/sweetalert2.js';
+import { SweetAlertOptions } from 'sweetalert2';
+import Swal from 'sweetalert2/dist/sweetalert2.min.js';
 
 type VueSwalInstance = typeof Swal.fire;
 
