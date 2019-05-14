@@ -112,7 +112,7 @@ In some cases, there was a need to expand sweetalert2. And added more options.
 
 | options | type | default |
 |--- |--- |--- |
-| [includeCss](#includecss) | boolean | false |
+| [includeCss](#includecss) | boolean | true |
 
 #### includeCss
 
