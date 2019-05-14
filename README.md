@@ -48,7 +48,7 @@ Vue.use(VueSweetalert2, options)
 ```html
 // example-vue-component.vue
 <template>
-    <button v-on:click="showAlert">Hello world</button>
+    <button @click="showAlert">Hello world</button>
 </template>
 
 <script>
@@ -103,3 +103,30 @@ Or pass in global options like this:
 
 
 ## The documentation for `sweetalert2`, you can find [here](https://sweetalert2.github.io/).
+
+---
+
+# Additional options
+
+In some cases, there was a need to expand sweetalert2. And added more options.
+
+| options | type | default |
+|---|---|---|---|
+| [includeCss](#includecss) | boolean | false |
+
+#### includeCss
+
+```js
+// main.js | main.ts
+Vue.use(VueSweetalert2, { includeCss: false });
+```
+
+```scss
+// style.scss
+@import '~sweetalert2/src/variables';
+
+$swal2-background: #990000;
+
+@import '~sweetalert2/src/sweetalert2';
+```
+
