@@ -1,10 +1,11 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 
-var is_production = (process.env.NODE_ENV === 'production');
+// const is_production = (process.env.NODE_ENV === 'production');
+const is_production = false; // for DEMO
 
 module.exports = {
     entry: './src/main.ts',
@@ -14,6 +15,7 @@ module.exports = {
         filename: 'build.js'
     },
     mode: is_production ? 'production' : 'development',
+    devtool: is_production ? false : 'cheap-eval-source-map',
     module: {
         rules: [
             // Vue

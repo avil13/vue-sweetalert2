@@ -28,17 +28,13 @@ class VueSweetalert2 {
             ...options
         };
 
-        if (options.includeCss === false) {
+        if (options.includeCss !== false) {
             require('sweetalert2/dist/sweetalert2.min.css');
         }
 
+        const _swal = options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal);
+
         // adding a global method or property
-        let _swal: VueSwalInstance;
-
-        _swal = options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal);
-
-        // Object.assign(_swal, Swal);
-
         Vue['swal'] = _swal;
 
         // add the instance method

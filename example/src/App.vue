@@ -33,7 +33,6 @@ Vue.use
 export default class AppComponent extends Vue {
     msg: string = 'Welcome to Vue-Sweetalert2 example'
 
-
     simple() {
         this.$swal('Hello world!');
     }
