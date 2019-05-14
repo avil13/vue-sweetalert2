@@ -111,7 +111,7 @@ Or pass in global options like this:
 In some cases, there was a need to expand sweetalert2. And added more options.
 
 | options | type | default |
-|---|---|---|---|
+|--- |--- |--- |
 | [includeCss](#includecss) | boolean | false |
 
 #### includeCss
