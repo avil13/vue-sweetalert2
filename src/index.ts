@@ -1,39 +1,43 @@
 // @ts-check
 import Vue from 'vue';
 
-/** @type swal {import("sweetalert2")} */
 import Swal, { SweetAlertOptions } from 'sweetalert2';
 
-require('sweetalert2/dist/sweetalert2.min.css');
-
+type VueSwalInstance = typeof Swal.fire;
 
 declare module 'vue/types/vue' {
     interface Vue {
-        $swal: typeof Swal.fire;
+        $swal: VueSwalInstance;
     }
+
     interface VueConstructor<V extends Vue = Vue> {
-        swal: typeof Swal.fire;
+        swal: VueSwalInstance;
     }
 }
 
-
-
-function isBrowser() {
-    return typeof window !== 'undefined';
+interface VueSweetalert2Options extends SweetAlertOptions {
+    includeCss?: boolean;
 }
 
 class VueSweetalert2 {
-    static install(Vue: Vue | any, options?: SweetAlertOptions): void {
-        // adding a global method or property
-        let _swal;
+    static install(Vue: Vue | any, options?: VueSweetalert2Options): void {
+        options = {
+            ...{
+                includeCss: true
+            },
+            ...options
+        };
 
-        if (isBrowser()) {
-            _swal = (options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal));
-        } else {
-            _swal = function () {
-                return Promise.resolve();
-            };
+        if (options.includeCss === false) {
+            require('sweetalert2/dist/sweetalert2.min.css');
         }
+
+        // adding a global method or property
+        let _swal: VueSwalInstance;
+
+        _swal = options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal);
+
+        // Object.assign(_swal, Swal);
 
         Vue['swal'] = _swal;
 
@@ -42,7 +46,6 @@ class VueSweetalert2 {
             Vue.prototype.$swal = _swal;
         }
     }
-};
-
+}
 
 export default VueSweetalert2;
