@@ -1,8 +1,21 @@
-import Vue from 'vue';
 // @ts-check
+import Vue from 'vue';
+
 /** @type swal {import("sweetalert2")} */
 import Swal, { SweetAlertOptions } from 'sweetalert2';
-import 'sweetalert2/dist/sweetalert2.min.css';
+
+require('sweetalert2/dist/sweetalert2.min.css');
+
+
+declare module 'vue/types/vue' {
+    interface Vue {
+        $swal: typeof Swal.fire;
+    }
+    interface VueConstructor<V extends Vue = Vue> {
+        swal: typeof Swal.fire;
+    }
+}
+
 
 
 function isBrowser() {
@@ -15,7 +28,7 @@ class VueSweetalert2 {
         let _swal;
 
         if (isBrowser()) {
-            _swal = (options ? Swal.mixin(options).fire : Swal.fire);
+            _swal = (options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal));
         } else {
             _swal = function () {
                 return Promise.resolve();
@@ -26,11 +39,7 @@ class VueSweetalert2 {
 
         // add the instance method
         if (!Vue.prototype.hasOwnProperty('$swal')) {
-            Object.defineProperty(Vue.prototype, '$swal', {
-                get: function get() {
-                    return _swal
-                }
-            });
+            Vue.prototype.$swal = _swal;
         }
     }
 };
