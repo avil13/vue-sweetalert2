@@ -13,11 +13,10 @@
     "gh": "npm run build && npm run gh-pages"
   },
   "dependencies": {
-    "vue": "^2.5.22",
-    "sweetalert2": "8.x"
+    "vue": "^2.5.22"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.4.4",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
@@ -36,7 +35,7 @@
     "vue-template-compiler": "^2.5.22",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.3.1"
   },
   "browserslist": [
     "> 1%",
