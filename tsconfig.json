@@ -10,7 +10,6 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "noImplicitAny": false,
-        "allowJs": true,
         "noImplicitThis": false,
         "strictNullChecks": true,
         "removeComments": true,
@@ -24,9 +23,6 @@
             ]
         }
     },
-    "files": [
-        "./index.d.ts"
-    ],
     "include": [
         "./src/**/*.ts",
         "./src/**/*.vue"
