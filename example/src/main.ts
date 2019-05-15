@@ -4,7 +4,7 @@ import App from './App.vue';
 
 import VueSweetalert2 from './vue-sweetalert2';
 
-Vue.use(VueSweetalert2, { includeCss: false });
+Vue.use(VueSweetalert2, { includeCss: true });
 
 new Vue({
     el: '#app',
