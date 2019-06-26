@@ -1,6 +1,6 @@
 {
     "name": "vue-sweetalert2",
-    "version": "2.0.5",
+    "version": "2.1.0",
     "description": "Simple Vue sweetalert2 package",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -53,6 +53,7 @@
         "jest": "^24.8.0",
         "require-hacker": "^3.0.1",
         "ts-jest": "^24.0.2",
+        "tslint": "^5.18.0",
         "typescript": "^3.5.2",
         "vue": "^2.6.10",
         "vue-jest": "^3.0.4",
