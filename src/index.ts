@@ -1,8 +1,7 @@
-// @ts-check
 import Vue from 'vue';
 
 import { SweetAlertOptions } from 'sweetalert2';
-import Swal from 'sweetalert2/dist/sweetalert2.min.js';
+import Swal from 'sweetalert2';
 
 type VueSwalInstance = typeof Swal.fire;
 
@@ -21,26 +20,24 @@ interface VueSweetalert2Options extends SweetAlertOptions {
 }
 
 class VueSweetalert2 {
-    static install(Vue: Vue | any, options?: VueSweetalert2Options): void {
+    static install(vue: Vue | any, options?: VueSweetalert2Options): void {
         options = {
-            ...{
-                includeCss: true
-            },
-            ...options
+            includeCss: true,
+            ...(options || {})
         };
 
-        if (options.includeCss !== false) {
-            require('sweetalert2/dist/sweetalert2.min.css');
-        }
+        // if (options.includeCss !== false) {
+        //     require('sweetalert2/dist/sweetalert2.min.css');
+        // }
 
         const _swal = options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal);
 
         // adding a global method or property
-        Vue['swal'] = _swal;
+        vue['swal'] = _swal;
 
         // add the instance method
-        if (!Vue.prototype.hasOwnProperty('$swal')) {
-            Vue.prototype.$swal = _swal;
+        if (!vue.prototype.hasOwnProperty('$swal')) {
+            vue.prototype.$swal = _swal;
         }
     }
 }

@@ -5,9 +5,15 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "test": "exit 0",
-        "test:watch": "ava --watch",
+        "test": "jest --no-cache",
+        "test:watch": "jest --watch",
         "prepublish": "tsc -p ."
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm test",
+            "pre-push": "npm test"
+        }
     },
     "keywords": [
         "sweetalert",
@@ -31,22 +37,25 @@
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
     },
     "devDependencies": {
-        "ava": "^1.4.1",
+        "@types/jest": "^24.0.15",
+        "@types/node": "^12.0.10",
+        "@vue/eslint-config-typescript": "^4.0.0",
+        "@vue/test-utils": "^1.0.0-beta.29",
         "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.2",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
+        "eslint": "^6.0.1",
+        "eslint-plugin-vue": "^5.2.3",
+        "husky": "^2.5.0",
+        "jest": "^24.8.0",
         "require-hacker": "^3.0.1",
-        "typescript": "^3.4.5",
-        "vue": "^2.6.10"
-    },
-    "ava": {
-        "babel": "inherit",
-        "require": [
-            "babel-register",
-            "babel-polyfill",
-            "./ignore-utils"
-        ]
+        "ts-jest": "^24.0.2",
+        "typescript": "^3.5.2",
+        "vue": "^2.6.10",
+        "vue-jest": "^3.0.4",
+        "vue-template-compiler": "^2.6.10"
     }
 }

@@ -17,6 +17,10 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
         "sourceMap": true,
+        "types": [
+            "node",
+            "jest"
+        ],
         "paths": {
             "@/*": [
                 "./src/*"
