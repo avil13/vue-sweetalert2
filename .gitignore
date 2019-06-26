@@ -17,4 +17,6 @@ yarn.lock
 *.njsproj
 *.sln
 
+.npmrc
+
 dist
