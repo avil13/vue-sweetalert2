@@ -31,6 +31,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 Vue.use(VueSweetalert2);
 ```
 
+
 Now in the global object, you can access all the methods of [sweetalert2](https://github.com/limonte/sweetalert2).
 
 If you want to add global options like button colors, do something like this:
@@ -46,6 +47,18 @@ const options = {
 
 Vue.use(VueSweetalert2, options)
 ```
+
+Using scss styles are loaded so
+```scss
+// style.scss
+@import '~sweetalert2/src/variables';
+
+$swal2-background: #990000;
+
+@import '~sweetalert2/src/sweetalert2';
+```
+
+
 
 
 ```html
@@ -106,30 +119,4 @@ Or pass in global options like this:
 
 
 ## The documentation for `sweetalert2`, you can find [here](https://sweetalert2.github.io/).
-
----
-
-# Additional options
-
-In some cases, there was a need to expand sweetalert2. And added more options.
-
-| options | type | default |
-|--- |--- |--- |
-| [includeCss](#includecss) | boolean | true |
-
-#### includeCss
-
-```js
-// main.js | main.ts
-Vue.use(VueSweetalert2, { includeCss: false });
-```
-
-```scss
-// style.scss
-@import '~sweetalert2/src/variables';
-
-$swal2-background: #990000;
-
-@import '~sweetalert2/src/sweetalert2';
-```
 

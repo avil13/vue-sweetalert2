@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "type": "node",
+        "request": "launch",
+        "name": "webpack-dev-server",
+        "program": "${workspaceFolder}/node_modules/.bin/webpack-dev-server",
+        "outFiles": [
+            "${workspaceFolder}/**/*.js"
+        ],
+        "args": [
+            "--hot"
+        ],
+        "env": {
+            "NODE_ENV": "development"
+        }
+    }]
+}

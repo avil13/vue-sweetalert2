@@ -24,10 +24,7 @@
 
 <script lang="ts">
 // import Vue from 'vue';
-// import Component from 'vue-class-component';
 import { Component, Vue } from 'vue-property-decorator';
-
-Vue.use
 
 @Component
 export default class AppComponent extends Vue {
@@ -35,6 +32,7 @@ export default class AppComponent extends Vue {
 
     simple() {
         this.$swal('Hello world!');
+        debugger;
     }
 // /*
     success() {
