@@ -21,15 +21,12 @@ interface VueSweetalert2Options extends SweetAlertOptions {
 
 class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void {
-        options = {
-            ...(options || {})
-        };
-
-        // const _swal = options ? Swal.mixin(options).fire.bind(Swal) : Swal.fire.bind(Swal);
         const _swal = (...args: [SweetAlertOptions]) => {
-            return options
-                ? Swal.mixin(options).fire.apply(Swal, args)
-                : Swal.fire.apply(Swal, args);
+            if (options) {
+                const mixed = Swal.mixin(options);
+                return  mixed.fire.apply(mixed, args);
+            }
+            return Swal.fire.apply(Swal, args);
         };
 
         for (let k in Swal) {

@@ -32,7 +32,6 @@ export default class AppComponent extends Vue {
 
     simple() {
         this.$swal('Hello world!');
-        debugger;
     }
 // /*
     success() {

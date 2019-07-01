@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.1.1 (01/07/2019)
+
+#### Bug Fixes:
+
+- [#60](https://github.com/avil13/vue-sweetalert2/issues/60) Custom Styles not working after update
+
+---
+
 ## v2.1.0 (26/06/2019)
 
 #### Bug Fixes:
@@ -9,9 +17,5 @@
 - [#56](https://github.com/avil13/vue-sweetalert2/issues/56) Object doesn't support property or method 'mixin'
 - [#57](https://github.com/avil13/vue-sweetalert2/issues/57) showLoading
 - [#58](https://github.com/avil13/vue-sweetalert2/issues/58) Close sweetalert
-
-#### Enhancements:
-
-- [#60](https://github.com/avil13/vue-sweetalert2/issues/60) Custom Styles not working after update
 
 ---
