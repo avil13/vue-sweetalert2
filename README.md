@@ -77,11 +77,7 @@ Using scss styles are loaded so
 import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
 
-const options = {
-    includeCss: false
-}
-
-Vue.use(VueSweetalert2, options)
+Vue.use(VueSweetalert2)
 ```
 
 ```scss
