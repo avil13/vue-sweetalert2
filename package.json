@@ -38,7 +38,7 @@
     },
     "devDependencies": {
         "@types/jest": "^24.0.15",
-        "@types/node": "^12.0.10",
+        "@types/node": "^12.6.2",
         "@vue/eslint-config-typescript": "^4.0.0",
         "@vue/test-utils": "^1.0.0-beta.29",
         "babel-core": "^6.26.3",
@@ -49,14 +49,19 @@
         "babel-preset-vue": "^2.0.2",
         "eslint": "^6.0.1",
         "eslint-plugin-vue": "^5.2.3",
-        "husky": "^2.5.0",
+        "husky": "^3.0.0",
         "jest": "^24.8.0",
         "require-hacker": "^3.0.1",
         "ts-jest": "^24.0.2",
         "tslint": "^5.18.0",
-        "typescript": "^3.5.2",
+        "typescript": "^3.5.3",
         "vue": "^2.6.10",
         "vue-jest": "^3.0.4",
         "vue-template-compiler": "^2.6.10"
+    },
+    "nodemonConfig": {
+        "watch": ["src"],
+        "exec": "npm run prepublish",
+        "delay": 2500
     }
 }
