@@ -14,7 +14,7 @@ Vue.js wrapper for SweetAlert2. With support SSR.
 
 ## Get started
 
-
+### Basics
 ```bash
 npm install -S vue-sweetalert2
 ```
@@ -31,35 +31,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 Vue.use(VueSweetalert2);
 ```
 
-
 Now in the global object, you can access all the methods of [sweetalert2](https://github.com/limonte/sweetalert2).
-
-If you want to add global options like button colors, do something like this:
-```js
-// main.js
-import Vue from 'vue';
-import VueSweetalert2 from 'vue-sweetalert2';
-
-const options = {
-  confirmButtonColor: '#41b882',
-  cancelButtonColor: '#ff7674'
-}
-
-Vue.use(VueSweetalert2, options)
-```
-
-Using scss styles are loaded so
-```scss
-// style.scss
-@import '~sweetalert2/src/variables';
-
-$swal2-background: #990000;
-
-@import '~sweetalert2/src/sweetalert2';
-```
-
-
-
 
 ```html
 // example-vue-component.vue
@@ -83,6 +55,43 @@ export default {
 ```js
 Vue.swal('Hello Vue world!!!');
 ```
+
+### Global options
+If you want to add global options like button colors, do something like this:
+```js
+// main.js
+import Vue from 'vue';
+import VueSweetalert2 from 'vue-sweetalert2';
+
+const options = {
+  confirmButtonColor: '#41b882',
+  cancelButtonColor: '#ff7674'
+}
+
+Vue.use(VueSweetalert2, options)
+```
+### Custom styling
+Using scss styles are loaded so
+```js
+// main.js
+import Vue from 'vue';
+import VueSweetalert2 from 'vue-sweetalert2';
+
+Vue.use(VueSweetalert2)
+```
+
+```scss
+// style.scss
+@import '~sweetalert2/src/variables';
+
+$swal2-background: #990000;
+
+@import '~sweetalert2/src/sweetalert2';
+```
+
+
+
+
 
 ## Nuxt.js
 
