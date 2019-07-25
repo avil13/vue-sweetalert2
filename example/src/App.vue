@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="container">
-        <img src="./assets/logo.png" alt="vue sweetalert2" class="responsive">
+        <!-- <img src="./assets/logo.png" alt="vue sweetalert2" class="responsive"> -->
         <h1 class="h1">{{ msg }}</h1>
 
         <div class="row">
@@ -16,6 +16,9 @@
             <button @click="toastTopEnd" class="btn btn-outline-primary col s12 m3" type="button">
                 toast top end
             </button>
+            <button @click="alertHtmlTemplate" class="btn btn-outline-primary col s12 m3" type="button">
+                html & vue-component
+            </button>
         </div>
 
         <a href="https://sweetalert2.github.io" class="doc-link" target="_blank">Sweetalert2 documentation</a>
@@ -26,7 +29,13 @@
 // import Vue from 'vue';
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component
+import TitleComponnet from './components/TitleComponnet.vue';
+
+@Component({
+    components: {
+        TitleComponnet
+    }
+})
 export default class AppComponent extends Vue {
     msg: string = 'Welcome to Vue-Sweetalert2 example'
 
@@ -61,6 +70,13 @@ export default class AppComponent extends Vue {
             title: 'Hi man',
             text: 'is a good day!'
         });
+    }
+
+    alertHtmlTemplate() {
+        this.$swal({
+            title: 'this is Vue component',
+            html: `<div> <title-componnet color="963">Component</title-componnet> </div>`
+        })
     }
 // */
 }

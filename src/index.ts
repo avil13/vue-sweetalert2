@@ -21,13 +21,15 @@ interface VueSweetalert2Options extends SweetAlertOptions {
 
 class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void {
-        const _swal = (...args: [SweetAlertOptions]) => {
+        function _swal(...args: [SweetAlertOptions]) {
+            args = prepareArgs.call(this, args) as [SweetAlertOptions];
+
             if (options) {
                 const mixed = Swal.mixin(options);
-                return  mixed.fire.apply(mixed, args);
+                return mixed.fire.apply(mixed, args);
             }
             return Swal.fire.apply(Swal, args);
-        };
+        }
 
         for (let k in Swal) {
             if (Swal.hasOwnProperty(k) && typeof Swal[k] === 'function') {
@@ -44,6 +46,22 @@ class VueSweetalert2 {
             vue.prototype.$swal = _swal;
         }
     }
+}
+
+function prepareArgs(args: SweetAlertOptions[]): SweetAlertOptions[] {
+    return args.map(item => {
+        //  this.$options.components
+        // https://github.com/alexjoverm/v-runtime-template/blob/master/index.js#L34-L53
+
+        if (item.html) {
+            // const comp = createComp.call(this, this.$createElement, item.html);
+            const el = Vue.compile(item.html as string);
+            console.log(el, this);
+
+            debugger;
+        }
+        return item;
+    });
 }
 
 export default VueSweetalert2;
