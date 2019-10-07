@@ -9,6 +9,7 @@
         "test:watch": "jest --watch",
         "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
         "prepublish": "tsc -p .",
+        "pospublish": "cd example && npm install && npm publish",
         "lint:prettier": "prettier --write",
         "lint:ts": "tsc --noEmit --skipLibCheck",
         "lint": "npm run lint:prettier && npm run lint:ts"
@@ -20,6 +21,7 @@
     "dependencies": {
         "sweetalert2": "8.x"
     },
+    "homepage": "https://avil13.github.io/vue-sweetalert2/",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
