@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/vue-sweetalert2.svg)](https://www.npmjs.com/package/vue-sweetalert2)
 
+[![Coverage Status](https://coveralls.io/repos/github/avil13/vue-sweetalert2/badge.svg?branch=master)](https://coveralls.io/github/avil13/vue-sweetalert2?branch=master)
+
 Vue.js wrapper for SweetAlert2. With support SSR.
 
 ![VueSweetalert2](assets/logo.png)
@@ -15,10 +17,10 @@ Vue.js wrapper for SweetAlert2. With support SSR.
 ## Get started
 
 ### Basics
+
 ```bash
 npm install -S vue-sweetalert2
 ```
-
 
 ```js
 // main.js
@@ -40,44 +42,50 @@ Now in the global object, you can access all the methods of [sweetalert2](https:
 </template>
 
 <script>
-export default {
-    methods: {
-        showAlert(){
-            // Use sweetalert2
-            this.$swal('Hello Vue world!!!');
-        }
-    }
-}
+    export default {
+        methods: {
+            showAlert() {
+                // Use sweetalert2
+                this.$swal('Hello Vue world!!!');
+            },
+        },
+    };
 </script>
 ```
 
 // Or
+
 ```js
 Vue.swal('Hello Vue world!!!');
 ```
 
 ### Global options
+
 If you want to add global options like button colors, do something like this:
+
 ```js
 // main.js
 import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
 
 const options = {
-  confirmButtonColor: '#41b882',
-  cancelButtonColor: '#ff7674'
-}
+    confirmButtonColor: '#41b882',
+    cancelButtonColor: '#ff7674',
+};
 
-Vue.use(VueSweetalert2, options)
+Vue.use(VueSweetalert2, options);
 ```
+
 ### Custom styling
+
 Using scss styles are loaded so
+
 ```js
 // main.js
 import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
 
-Vue.use(VueSweetalert2)
+Vue.use(VueSweetalert2);
 ```
 
 ```scss
@@ -88,10 +96,6 @@ $swal2-background: #990000;
 
 @import '~sweetalert2/src/sweetalert2';
 ```
-
-
-
-
 
 ## Nuxt.js
 
@@ -105,9 +109,7 @@ Add `vue-sweetalert2/nuxt` to modules section of `nuxt.config.js`
 
 ```js
 {
-  modules: [
-    'vue-sweetalert2/nuxt'
-  ]
+    modules: ['vue-sweetalert2/nuxt'];
 }
 ```
 
@@ -126,6 +128,4 @@ Or pass in global options like this:
 }
 ```
 
-
 ## The documentation for `sweetalert2`, you can find [here](https://sweetalert2.github.io/).
-

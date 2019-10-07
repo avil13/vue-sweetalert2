@@ -18,12 +18,12 @@ install:
 script:
   - npm run test
   - npm run test:coveralls
-  - npm run prepublish
+  - npm run publish
 
 deploy:
   provider: npm
-  email: EMAIL_ADDRESS
-  api_key: AUTH_TOKEN
+  email: $EMAIL_ADDRESS
+  api_key: $AUTH_TOKEN
   on:
     branch: master
   skip_cleanup: true
