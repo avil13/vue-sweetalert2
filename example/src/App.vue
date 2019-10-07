@@ -1,44 +1,62 @@
 <template>
     <div id="app" class="container">
-        <img src="./assets/logo.png" alt="vue sweetalert2" class="responsive">
+        <img src="./assets/logo.png" alt="vue sweetalert2" class="responsive" />
         <h1 class="h1">{{ msg }}</h1>
 
         <div class="row">
-            <button @click="simple" class="btn btn-outline-primary col s12 m3" type="button">
+            <button
+                @click="simple"
+                class="btn btn-outline-primary col s12 m3"
+                type="button"
+            >
                 simple
             </button>
-            <button @click="success" class="btn btn-outline-primary col s12 m3" type="button">
+            <button
+                @click="success"
+                class="btn btn-outline-primary col s12 m3"
+                type="button"
+            >
                 success
             </button>
-            <button @click="error" class="btn btn-outline-primary col s12 m3" type="button">
+            <button
+                @click="error"
+                class="btn btn-outline-primary col s12 m3"
+                type="button"
+            >
                 error
             </button>
-            <button @click="toastTopEnd" class="btn btn-outline-primary col s12 m3" type="button">
+            <button
+                @click="toastTopEnd"
+                class="btn btn-outline-primary col s12 m3"
+                type="button"
+            >
                 toast top end
             </button>
         </div>
 
-        <a href="https://sweetalert2.github.io" class="doc-link" target="_blank">Sweetalert2 documentation</a>
+        <a href="https://sweetalert2.github.io" class="doc-link" target="_blank"
+            >Sweetalert2 documentation</a
+        >
     </div>
 </template>
 
 <script lang="ts">
 // import Vue from 'vue';
-import { Component, Vue } from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
 
 @Component
 export default class AppComponent extends Vue {
-    msg: string = 'Welcome to Vue-Sweetalert2 example'
+    msg = 'Welcome to Vue-Sweetalert2 example';
 
     simple() {
         this.$swal('Hello world!');
     }
-// /*
+    // /*
     success() {
         Vue.swal({
             type: 'success',
             title: 'Hello',
-            text: 'Hello brave new world!'
+            text: 'Hello brave new world!',
         });
     }
 
@@ -46,7 +64,7 @@ export default class AppComponent extends Vue {
         this.$swal({
             type: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!'
+            text: 'Something went wrong!',
         });
     }
 
@@ -59,13 +77,12 @@ export default class AppComponent extends Vue {
 
             type: 'success',
             title: 'Hi man',
-            text: 'is a good day!'
+            text: 'is a good day!',
         });
     }
-// */
+    // */
 }
 </script>
-
 
 <style>
 html,
@@ -136,7 +153,8 @@ a {
     line-height: 1.5;
     padding: 0.475rem 0.75rem;
     text-align: center;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;

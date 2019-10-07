@@ -1,8 +1,8 @@
 import 'jest';
-import { mount, createLocalVue } from '@vue/test-utils';
+import {mount, createLocalVue} from '@vue/test-utils';
 
 import VueSweetalert2 from '../src';
-import { CreateElement } from 'vue';
+import {CreateElement} from 'vue';
 
 const factory = () => {
     const localVue = createLocalVue();
@@ -17,9 +17,9 @@ const factoryComponent = () => {
         {
             render(h: CreateElement) {
                 return h('div');
-            }
+            },
         },
-        { localVue }
+        {localVue},
     );
 };
 

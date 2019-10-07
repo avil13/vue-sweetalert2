@@ -1,3 +1,3 @@
 module.exports = {
-  singleQuote: true
+    ...require('@tinkoff/linters/prettier/prettier.config'),
 };

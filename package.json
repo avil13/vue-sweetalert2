@@ -1,32 +1,20 @@
 {
     "name": "vue-sweetalert2",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "description": "Simple Vue sweetalert2 package",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "jest --no-cache",
         "test:watch": "jest --watch",
-        "prepublish": "tsc -p ."
+        "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+        "prepublish": "tsc -p .",
+        "lint:prettier": "prettier --write",
+        "lint:ts": "tsc --noEmit --skipLibCheck",
+        "lint": "npm run lint:prettier && npm run lint:ts"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm test",
-            "pre-push": "npm test"
-        }
-    },
-    "keywords": [
-        "sweetalert",
-        "sweetalert2",
-        "alert",
-        "prompt",
-        "ssr"
-    ],
-    "files": [
-        "src",
-        "nuxt",
-        "dist"
-    ],
+    "keywords": ["sweetalert", "sweetalert2", "alert", "prompt", "ssr"],
+    "files": ["src", "nuxt", "dist"],
     "author": "Aleksey Pivkin @avil13",
     "license": "MIT",
     "dependencies": {
@@ -37,31 +25,45 @@
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
     },
     "devDependencies": {
-        "@types/jest": "^24.0.15",
-        "@types/node": "^12.6.2",
+        "@tinkoff/linters": "^0.4.0",
+        "@types/jest": "^24.0.18",
+        "@types/node": "^12.7.11",
         "@vue/eslint-config-typescript": "^4.0.0",
         "@vue/test-utils": "^1.0.0-beta.29",
         "babel-core": "^6.26.3",
-        "babel-eslint": "^10.0.2",
+        "babel-eslint": "^10.0.3",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
-        "eslint": "^6.0.1",
+        "coveralls": "^3.0.6",
+        "eslint": "^6.5.1",
         "eslint-plugin-vue": "^5.2.3",
-        "husky": "^3.0.0",
-        "jest": "^24.8.0",
+        "husky": "^3.0.8",
+        "jest": "^24.9.0",
+        "lint-staged": "^9.4.1",
+        "prettier": "^1.18.2",
         "require-hacker": "^3.0.1",
-        "ts-jest": "^24.0.2",
-        "tslint": "^5.18.0",
-        "typescript": "^3.5.3",
+        "ts-jest": "^24.1.0",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.3",
         "vue": "^2.6.10",
-        "vue-jest": "^3.0.4",
+        "vue-jest": "^3.0.5",
         "vue-template-compiler": "^2.6.10"
     },
     "nodemonConfig": {
         "watch": ["src"],
         "exec": "npm run prepublish",
         "delay": 2500
+    },
+    "lint-staged": {
+        "*.{js,html,vue,md,json}": ["npm run lint:prettier", "git add"],
+        "*.{ts}": ["npm run lint:prettier", "npm run lint:ts", "git add"]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && npm test",
+            "pre-push": "lint-staged && npm test"
+        }
     }
 }

@@ -1,15 +1,16 @@
 import 'jest';
-import { createLocalVue } from '@vue/test-utils';
+import {createLocalVue} from '@vue/test-utils';
 import Swal from 'sweetalert2';
 
 import VueSweetalert2 from '../src';
 
 const factory = () => {
     const localVue = createLocalVue();
+
     localVue.use(VueSweetalert2);
+
     return localVue;
 };
-
 
 /**
  * Return list of all methods name in array: [ ['methodName'] ]
@@ -25,7 +26,6 @@ function getAllMethodsNames(): string[][] {
 
 const allMethodsNames = getAllMethodsNames();
 
-
 describe('Vue-SweetAlert2 swal methods v.8.x', () => {
     it.skip('should fire onOpen option key', () => {
         const Vue = factory();
@@ -33,7 +33,7 @@ describe('Vue-SweetAlert2 swal methods v.8.x', () => {
 
         Vue.swal({
             animation: false,
-            onOpen
+            onOpen,
         });
 
         // TODO: add global window mock

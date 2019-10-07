@@ -17,6 +17,9 @@ yarn.lock
 *.njsproj
 *.sln
 
+.vscode/settings.json
+coverage
+
 .npmrc
 
 dist

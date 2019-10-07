@@ -1,0 +1,35 @@
+sudo: false
+language: node_js
+node_js:
+  - '8'
+  - '10'
+  - node
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm update
+install:
+  - npm install
+script:
+  - npm run lint
+  - npm run test
+  - npm run test:coveralls
+  - npm run prepublish
+
+deploy:
+  provider: npm
+  email: "EMAIL_ADDRESS"
+  api_key: "AUTH_TOKEN"
+  on:
+    branch: master
+  skip_cleanup: true
+
+notification:
+  email: false
