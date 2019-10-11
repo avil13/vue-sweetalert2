@@ -16,14 +16,5 @@ script:
 - npm run test
 - npm run test:coveralls
 - npm publish
-deploy:
-  provider: npm
-  tag: next
-  email: "$EMAIL_ADDRESS"
-  api_key:
-    secure: O68JunPFnpkWIXmbGhvomehJnaDvFdrd5ss4GDCuZSck9tUXsCqAJhU5BKHtfS/IGvKmXRuFvW0V0LRr2DpCRHEcdqnvel9xnht5G0F79RT6eT1FV4EhBdXBqGWdehlShvDIg8X0xUZuepTJlDjRGzCSwexURlLqvXY0XXVaiA3DLOMYHhk4+9eee1Z8ZQgr73Ut2ss5SwXK5QABu+rXxdHrf5NbeBI/OI2TyvdHsZc6Rt9GM3ruiuE88ZqAS1+QzFcwzxljDPwatZOp5VPZ1u/54Vw81GnaVV7aOgyQDWdtBLxAZQad848P3wXczK0tuZc+J2KPVKq2PEfjaETuq4nYFAlI9lSnoTQ5Y2G5hLflkly319GPXrivxUbkYXCP5vkI8AqtnRdDmhutuqeWKpUt23VSiAa9maRisOeFDAHzUcrQEFtE3oxgaDiJqOX4n7WucLbFAfBIJWVNsgCNDgkIri+xc+ki6AQI5N+BF4UPxEkVI3aCnqJTC4kYCkVJDNol3zbo2M0oajhxXY0Oi4TTRj2Vq0Pv8F5UbmAc6lZQW/RT/RpM8+ec1bz6LTiKXe5ES+rvRMRSl3DRFPmX+WoQKowyEqa0re2JZMQ46f8bRkKnUcgTyYmi8jTwuhDN3GKUUmbNlD4pN2ixrLifjVmVvwZDKI3KDCSgEoMZUQA=
-  on:
-    branch: master
-  skip_cleanup: true
 notification:
   email: false
