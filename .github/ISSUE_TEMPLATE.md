@@ -1,7 +1,7 @@
 
 ## 👋 Good day
 
-- In case of detection of a bug, please attach a link to https://codesandbox.io/ because reproducing your environment is very difficult.
+- If you've found a bug, please attach a link to a sandbox from [codesandbox.io](https://codesandbox.io/) that reproduce your bug.  Without the sandbox, it can be verry difficult to recreate your environment and fix the bug.
 
 
 ## I also want to know
