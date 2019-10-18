@@ -59,8 +59,8 @@
         "delay": 2500
     },
     "lint-staged": {
-        "*.{js,html,vue,md,json}": ["npm run lint:prettier", "git add"],
-        "*.{ts}": ["npm run lint:prettier", "npm run lint:ts", "git add"]
+        "*.{js,html,vue,md,json}": ["npm run lint:prettier && git add"],
+        "*.{ts}": ["npm run lint:prettier && npm run lint:ts && git add"]
     },
     "husky": {
         "hooks": {

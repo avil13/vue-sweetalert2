@@ -17,22 +17,11 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
         "sourceMap": true,
-        "types": [
-            "node",
-            "jest"
-        ],
+        "types": ["node", "jest"],
         "paths": {
-            "@/*": [
-                "./src/*"
-            ]
+            "@/*": ["./src/*"]
         }
     },
-    "include": [
-        "./src/**/*.ts",
-        "./src/**/*.vue"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+    "include": ["./src/**/*.ts", "./src/**/*.vue"],
+    "exclude": ["node_modules", "dist", "example"]
 }

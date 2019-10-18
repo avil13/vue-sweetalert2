@@ -1,10 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "lib": [
-            "dom",
-            "es2015"
-        ],
+        "lib": ["dom", "es2015"],
         "module": "es2015",
         "moduleResolution": "node",
         "experimentalDecorators": true,
@@ -18,19 +15,10 @@
         "baseUrl": ".",
         "sourceMap": true,
         "paths": {
-            "@/*": [
-                "./src/*"
-            ]
+            "@/*": ["./src/*"]
         }
     },
-    "files": [
-        "./index.d.ts"
-    ],
-    "include": [
-        "./src/**/*.ts",
-        "./src/**/*.vue"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "files": ["vue-shims.d.ts", "**/*.d.ts"],
+    "include": ["./src/**/*.ts", "./src/**/*.vue"],
+    "exclude": ["node_modules"]
 }
