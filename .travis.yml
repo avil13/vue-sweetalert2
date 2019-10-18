@@ -15,6 +15,5 @@ install:
 script:
 - npm run test
 - npm run test:coveralls
-- npm publish
 notification:
   email: false
