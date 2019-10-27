@@ -121,8 +121,9 @@ Or pass in global options like this:
     [
       'vue-sweetalert2/nuxt',
       {
-        confirmButtonColor: '#41b882'
-      ff7674
+        confirmButtonColor: '#41b882',
+        cancelButtonColor: '#ff7674'
+      }
     ]
   ]
 }
