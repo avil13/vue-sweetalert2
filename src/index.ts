@@ -21,7 +21,7 @@ interface VueSweetalert2Options extends SweetAlertOptions {
 
 class VueSweetalert2 {
     static install(vue: Vue | any, options?: VueSweetalert2Options): void {
-        const _swal = (...args: [SweetAlertOptions]) => {
+        const swalFunction = (...args: [SweetAlertOptions]) => {
             if (options) {
                 const mixed = Swal.mixin(options);
 
@@ -38,17 +38,19 @@ class VueSweetalert2 {
                 Object.prototype.hasOwnProperty.call(Swal, methodName) &&
                 typeof Swal[methodName] === 'function'
             ) {
-                _swal[methodName] = (...args: any[]) => {
-                    return Swal[methodName].apply(Swal, args);
-                };
+                swalFunction[methodName] = (method => {
+                    return (...args: any[]) => {
+                        return Swal[method].apply(Swal, args);
+                    };
+                })(methodName);
             }
         }
 
-        vue['swal'] = _swal;
+        vue['swal'] = swalFunction;
 
         // add the instance method
         if (!vue.prototype.hasOwnProperty('$swal')) {
-            vue.prototype.$swal = _swal;
+            vue.prototype.$swal = swalFunction;
         }
     }
 }

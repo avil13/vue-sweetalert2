@@ -18,7 +18,7 @@
             "@/*": ["./src/*"]
         }
     },
-    "files": ["vue-shims.d.ts", "**/*.d.ts"],
+    "files": ["vue-shims.d.ts"],
     "include": ["./src/**/*.ts", "./src/**/*.vue"],
     "exclude": ["node_modules"]
 }
