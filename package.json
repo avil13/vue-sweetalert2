@@ -10,6 +10,7 @@
         "test:watch": "jest --watch",
         "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
         "prepublish": "npm run build",
+        "postpublish": "npm run test:coveralls",
         "lint:prettier": "prettier --write",
         "lint:ts": "tsc --noEmit --skipLibCheck",
         "lint": "npm run lint:prettier && npm run lint:ts"
