@@ -5,11 +5,11 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
+        "build": "tsc -p .",
         "test": "jest --no-cache",
         "test:watch": "jest --watch",
         "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-        "prepublish": "tsc -p .",
-        "pospublish": "cd example && npm install && npm publish",
+        "prepublish": "npm run build",
         "lint:prettier": "prettier --write",
         "lint:ts": "tsc --noEmit --skipLibCheck",
         "lint": "npm run lint:prettier && npm run lint:ts"

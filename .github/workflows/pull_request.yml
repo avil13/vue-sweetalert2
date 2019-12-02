@@ -1,0 +1,13 @@
+on: pull_request
+name: Pull Request
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 8
+    - run: npm ci
+    - run: npm run test
