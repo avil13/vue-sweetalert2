@@ -1,9 +1,10 @@
 {
     "name": "vue-sweetalert2",
-    "version": "2.1.5",
+    "version": "3.0.0",
     "description": "Simple Vue sweetalert2 package",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "files": ["src", "nuxt", "dist"],
     "scripts": {
         "build": "tsc -p .",
         "test": "jest --no-cache",
@@ -16,11 +17,10 @@
         "lint": "npm run lint:prettier && npm run lint:ts"
     },
     "keywords": ["sweetalert", "sweetalert2", "alert", "prompt", "ssr"],
-    "files": ["src", "nuxt", "dist"],
     "author": "Aleksey Pivkin @avil13",
     "license": "MIT",
     "dependencies": {
-        "sweetalert2": "8.x"
+        "sweetalert2": "9.x"
     },
     "homepage": "https://avil13.github.io/vue-sweetalert2/",
     "repository": {
@@ -28,31 +28,31 @@
         "url": "git+https://github.com/avil13/vue-sweetalert2.git"
     },
     "devDependencies": {
-        "@tinkoff/linters": "^0.4.0",
-        "@types/jest": "^24.0.18",
-        "@types/node": "^12.7.11",
-        "@vue/eslint-config-typescript": "^4.0.0",
-        "@vue/test-utils": "^1.0.0-beta.29",
+        "@tinkoff/linters": "^0.6.0",
+        "@types/jest": "^24.0.25",
+        "@types/node": "^13.1.1",
+        "@vue/eslint-config-typescript": "^5.0.1",
+        "@vue/test-utils": "^1.0.0-beta.30",
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.0.3",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "babel-preset-stage-3": "^6.24.1",
         "babel-preset-vue": "^2.0.2",
-        "coveralls": "^3.0.6",
-        "eslint": "^6.5.1",
-        "eslint-plugin-vue": "^5.2.3",
-        "husky": "^3.0.8",
+        "coveralls": "^3.0.9",
+        "eslint": "^6.8.0",
+        "eslint-plugin-vue": "^6.1.1",
+        "husky": "^3.1.0",
         "jest": "^24.9.0",
-        "lint-staged": "^9.4.1",
-        "prettier": "^1.18.2",
+        "lint-staged": "^9.5.0",
+        "prettier": "^1.19.1",
         "require-hacker": "^3.0.1",
-        "ts-jest": "^24.1.0",
-        "tslint": "^5.20.0",
-        "typescript": "^3.6.3",
-        "vue": "^2.6.10",
+        "ts-jest": "^24.2.0",
+        "tslint": "^5.20.1",
+        "typescript": "^3.7.4",
+        "vue": "^2.6.11",
         "vue-jest": "^3.0.5",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.11"
     },
     "nodemonConfig": {
         "watch": ["src"],
