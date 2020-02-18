@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
-import {SweetAlertOptions} from 'sweetalert2';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal, {SweetAlertOptions} from 'sweetalert2';
+import swalLocalInstance from 'sweetalert2/dist/sweetalert2.js';
 
 type VueSwalInstance = typeof Swal.fire;
 
@@ -15,32 +15,24 @@ declare module 'vue/types/vue' {
     }
 }
 
-interface VueSweetalert2Options extends SweetAlertOptions {
-    // includeCss?: boolean;
-}
-
 class VueSweetalert2 {
-    static install(vue: Vue | any, options?: VueSweetalert2Options): void {
+    static install(vue: Vue | any, options?: SweetAlertOptions): void {
+        const swalLocalInstance = options ? Swal.mixin(options) : Swal;
+
         const swalFunction = (...args: [SweetAlertOptions]) => {
-            if (options) {
-                const mixed = Swal.mixin(options);
-
-                return mixed.fire.apply(mixed, args);
-            }
-
-            return Swal.fire.apply(Swal, args);
+            return swalLocalInstance.fire.apply(swalLocalInstance, args);
         };
 
         let methodName: string | number | symbol;
 
-        for (methodName in Swal) {
+        for (methodName in swalLocalInstance) {
             if (
-                Object.prototype.hasOwnProperty.call(Swal, methodName) &&
-                typeof Swal[methodName] === 'function'
+                Object.prototype.hasOwnProperty.call(swalLocalInstance, methodName) &&
+                typeof swalLocalInstance[methodName] === 'function'
             ) {
                 swalFunction[methodName] = (method => {
                     return (...args: any[]) => {
-                        return Swal[method].apply(Swal, args);
+                        return swalLocalInstance[method].apply(swalLocalInstance, args);
                     };
                 })(methodName);
             }
