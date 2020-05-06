@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.0.5
+
+#### package version fix
+
+## 3.0.4
+
+#### nuxt fixes
+
+
 ## v2.1.1 (01/07/2019)
 
 #### Bug Fixes:
