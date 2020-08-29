@@ -1,6 +1,0 @@
-{
-    "extends": ["@tinkoff/linters/tslint/bases/prettier.tslint.json"],
-    "rules": {
-        "interface-name": [true, "never-prefix"]
-    }
-}

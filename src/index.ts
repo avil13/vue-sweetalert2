@@ -1,17 +1,16 @@
 import Vue from 'vue';
 
 import Swal, {SweetAlertOptions} from 'sweetalert2';
-import swalLocalInstance from 'sweetalert2/dist/sweetalert2.js';
 
-type VueSwalInstance = typeof Swal.fire;
+type TVueSwalInstance = typeof Swal.fire;
 
 declare module 'vue/types/vue' {
     interface Vue {
-        $swal: VueSwalInstance;
+        $swal: TVueSwalInstance;
     }
 
     interface VueConstructor<V extends Vue = Vue> {
-        swal: VueSwalInstance;
+        swal: TVueSwalInstance;
     }
 }
 
