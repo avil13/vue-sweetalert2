@@ -25,7 +25,6 @@ const factoryComponent = () => {
 
 describe('Vue-SweetAlert2', () => {
   it('should exists', () => {
-    const Vue = factory();
     expect(typeof VueSweetalert2).toBe('function');
   });
 

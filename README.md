@@ -6,6 +6,18 @@
 
 Vue.js wrapper for SweetAlert2. With support SSR.
 
+---
+
+## Attention:
+
+When using "Vue3: Composition API" it is better not to use this wrapper.
+It is more practical to call sweetalert2 directly.
+
+Also, it is better to do it to get feedback faster, and be closer to the documentation.
+
+---
+
+
 ![VueSweetalert2](assets/logo.png)
 
 # [Demo](https://avil13.github.io/vue-sweetalert2/)
