@@ -39,13 +39,18 @@ class VueSweetalert2 {
       }
     }
 
-    vue['swal'] = swalFunction;
-
     // add the instance method
-    if (!Object.prototype.hasOwnProperty.call(vue, '$swal')) {
+    if (vue.config?.globalProperties && !vue.config.globalProperties.$swal) {
+      // vue 3
+      vue.config.globalProperties.$swal = swalFunction;
+      vue.provide('$swal', swalFunction);
+    } else if (!Object.prototype.hasOwnProperty.call(vue, '$swal')) {
+      // vue 2
+
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
       vue.prototype.$swal = swalFunction;
+      vue['swal'] = swalFunction;
     }
   }
 }

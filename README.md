@@ -10,7 +10,7 @@ Vue.js wrapper for SweetAlert2. With support SSR.
 
 ## Attention:
 
-When using "Vue3: Composition API" it is better not to use this wrapper.
+When using "Vue3: Composition API" it is better **not to use** this wrapper.
 It is more practical to call sweetalert2 directly.
 
 Also, it is better to do it to get feedback faster, and be closer to the documentation.
@@ -46,6 +46,8 @@ npm install -S vue-sweetalert2
 }
 ```
 
+## vue 2
+
 ```js
 // main.js
 import Vue from 'vue';
@@ -55,6 +57,24 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 Vue.use(VueSweetalert2);
+```
+
+## vue 3
+
+```js
+// main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+import './index.css'
+
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+const app = createApp(App)
+
+app.use(VueSweetalert2);
+
+app.mount('#app');
 ```
 
 Now in the global object, you can access all the methods of [sweetalert2](https://github.com/limonte/sweetalert2).
