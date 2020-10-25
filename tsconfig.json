@@ -19,9 +19,14 @@
         "sourceMap": true,
         "types": ["node", "jest"],
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": [
+              "packages/vue-sweetalert2/src/*"
+            ]
         }
     },
-    "include": ["./src/**/*.ts", "./src/**/*.vue"],
+    "include": [
+      "packages/vue-sweetalert2/src/**/*.ts",
+      "packages/vue-sweetalert2/src/**/*.vue"
+    ],
     "exclude": ["node_modules", "dist", "example"]
 }
