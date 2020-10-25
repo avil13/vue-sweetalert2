@@ -22,16 +22,12 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "sourceMap": true,
-    "types": ["node", "jest"],
-    "paths": {
-        "@/*": [
-          "packages/vue-sweetalert2/src/*"
-        ]
-      }
-    },
-    "include": [
-      "packages/vue-sweetalert2/src/**/*.ts",
-      "packages/vue-sweetalert2/src/**/*.vue"
+    "types": [
+      "vue-sweetalert2"
     ],
-    "exclude": ["node_modules", "dist", "example"]
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src"
+  ]
 }

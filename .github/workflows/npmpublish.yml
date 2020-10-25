@@ -31,9 +31,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      # Проверяем изменилась ли версия
+        # Проверяем изменилась ли версия
       - name: Set NEED_PUBLISH
-        run: echo ::set-env name=NEED_PUBLISH::$(./need-publish.sh)
+        run: echo "NEED_PUBLISH=$(./need-publish.sh)" >> $GITHUB_ENV
 
       - run: yarn
         if: ${{ env.NEED_PUBLISH }}

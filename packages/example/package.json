@@ -1,0 +1,17 @@
+{
+  "name": "vue-sweetalert2-example",
+  "version": "4.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=."
+  },
+  "dependencies": {
+    "vue": "^3.0.0-rc.1",
+    "vue-sweetalert2": "^4.1.1"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "vite": "^1.0.0-rc.1"
+  }
+}
