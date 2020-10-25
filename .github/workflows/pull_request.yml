@@ -1,4 +1,10 @@
+defaults:
+  run:
+    shell: bash
+    working-directory: packages/vue-sweetalert2
+
 on: pull_request
+
 name: Pull Request
 jobs:
   test:
@@ -8,6 +14,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: actions/setup-node@v1
       with:
-        node-version: 8
-    - run: npm ci
-    - run: npm run test
+        node-version: 12
+    - run: cd packages/vue-sweetalert2
+    - run: yarn
+    - run: yarn test

@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+defaults:
+  run:
+    shell: bash
+    working-directory: packages/vue-sweetalert2
+
 jobs:
   test:
     name: Testing job
@@ -26,8 +31,21 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      # Проверяем изменилась ли версия
+      - name: Set CURRENT VERSION to ENV
+        run: echo ::set-env name=CURRENT_VERSION::$(node -p -e "require('./package.json').version")
+
+      - name: Set PUBLIC VERSION to ENV
+        run: echo ::set-env name=PUBLIC_VERSION::$(npm show vue-sweetalert2 version)
+
+      - name: Set NEED_PUBLISH
+        run: echo ::set-env name=NEED_PUBLISH::$([[ "$CURRENT_VERSION"!="$PUBLIC_VERSION" ]] && echo '1' || echo '')
+
       - run: yarn
+        if: ${{ env.NEED_PUBLISH }}
+
       - run: yarn publish
+        if: ${{ env.NEED_PUBLISH }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           COVERALLS_REPO_TOKEN: "${{ secrets.COVERALLS_REPO_TOKEN }}"

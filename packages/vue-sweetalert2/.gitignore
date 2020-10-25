@@ -1,0 +1,26 @@
+node_modules
+dist
+npm-shrinkwrap.json
+
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+#yarn.lock
+package-lock.json
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+.vscode/settings.json
+coverage
+
+.npmrc
+
+dist
