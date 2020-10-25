@@ -1,6 +1,6 @@
+import { SweetAlertOptions } from 'sweetalert2';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 import Vue from 'vue';
-
-import Swal, {SweetAlertOptions} from 'sweetalert2';
 
 export * from 'sweetalert2';
 
