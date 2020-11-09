@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=."
+    "build": "vite build --base=/vue-sweetalert2"
   },
   "dependencies": {
     "vue": "^3.0.0-rc.1",
