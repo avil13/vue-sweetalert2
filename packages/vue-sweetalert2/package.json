@@ -7,7 +7,7 @@
   "files": ["src", "nuxt", "dist"],
   "scripts": {
     "build": "tsc -p .",
-    "test": "jest --no-cache",
+    "test": "jest --runInBand",
     "test:watch": "jest --watch",
     "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "prepublish": "npm run test && npm run build && auto-changelog",
