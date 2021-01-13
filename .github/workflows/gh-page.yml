@@ -28,8 +28,8 @@ jobs:
       - name: Install and Build - ⌛&🏗️
         if: ${{ env.NEED_PUBLISH }}
         run: |
-          npm ci
-          npm run build
+          yarn
+          yarn build
 
       - name: Deploy 🚀.🚀.🚀
         if: ${{ env.NEED_PUBLISH }}
