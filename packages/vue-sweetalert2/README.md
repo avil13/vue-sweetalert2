@@ -18,11 +18,15 @@ Also, it is better to do it to get feedback faster, and be closer to the documen
 ---
 
 
-![VueSweetalert2](assets/logo.png)
+![VueSweetalert2](https://raw.githubusercontent.com/avil13/vue-sweetalert2/master/packages/vue-sweetalert2/assets/logo.png)
 
-# [Demo](https://avil13.github.io/vue-sweetalert2/)
+<div align="center">
 
-![vue-sweetalert2 demo](assets/vue-sweetalert2.gif)
+  # [Demo](https://avil13.github.io/vue-sweetalert2/)
+
+</div>
+
+![vue-sweetalert2 demo](https://raw.githubusercontent.com/avil13/vue-sweetalert2/master/packages/vue-sweetalert2/assets/vue-sweetalert2.gif)
 
 ---
 

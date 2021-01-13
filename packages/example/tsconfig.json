@@ -28,6 +28,8 @@
     "rootDir": "./src"
   },
   "include": [
-    "./src"
+    "./src/*.vue",
+    "./src/*.ts",
+    "./src/*.js"
   ]
 }
