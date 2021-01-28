@@ -10,7 +10,8 @@
     "test": "jest --runInBand",
     "test:watch": "jest --watch",
     "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "prepublish": "npm run test && npm run build && auto-changelog",
+    "changelog": "auto-changelog git add ./CHANGELOG.md",
+    "prepublish": "npm run test && npm run build && npm run changelog",
     "__postpublish": "npm run test:coveralls",
     "lint:prettier": "prettier --write src/*.ts",
     "lint:ts": "tsc --noEmit --skipLibCheck",
@@ -26,6 +27,24 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/avil13/vue-sweetalert2.git"
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "exec": "npm run prepublish",
+    "delay": 2500
+  },
+  "lint-staged": {
+    "*.{js,html,vue,md,json}": ["npm run lint:prettier"],
+    "*.{ts}": ["npm run lint:prettier && npm run lint:ts"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test && npm run changelog",
+      "pre-push": "lint-staged && npm test"
+    }
+  },
+  "peerDependencies": {
+    "vue": "*"
   },
   "devDependencies": {
     "@types/jest": "^26.0.19",
@@ -55,20 +74,5 @@
     "vue": "^2.6.12",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.12"
-  },
-  "nodemonConfig": {
-    "watch": ["src"],
-    "exec": "npm run prepublish",
-    "delay": 2500
-  },
-  "lint-staged": {
-    "*.{js,html,vue,md,json}": ["npm run lint:prettier"],
-    "*.{ts}": ["npm run lint:prettier && npm run lint:ts"]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm test",
-      "pre-push": "lint-staged && npm test"
-    }
   }
 }

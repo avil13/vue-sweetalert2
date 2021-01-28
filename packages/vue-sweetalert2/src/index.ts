@@ -2,7 +2,6 @@ import {SweetAlertOptions} from 'sweetalert2';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import Vue from 'vue';
 
-export * from 'sweetalert2';
 
 type TVueSwalInstance = typeof Swal & typeof Swal.fire;
 
@@ -17,25 +16,23 @@ declare module 'vue/types/vue' {
 }
 
 class VueSweetalert2 {
-  static install(vue: Vue | any, options?: SweetAlertOptions): void {
-    const swalLocalInstance = options ? Swal.mixin(options) : Swal;
+  static install(vue: Vue | any, options: SweetAlertOptions = {}): void {
+    const swalLocalInstance: typeof Swal = Swal.mixin(options);
 
     const swalFunction = (...args: Parameters<typeof Swal['fire']>) => {
       return swalLocalInstance.fire.call(swalLocalInstance, ...args);
     };
 
+    Object.assign(swalFunction, Swal);
+
     let methodName: string | number | symbol;
 
-    for (methodName in swalLocalInstance) {
+    for (methodName in Swal) {
       if (
         Object.prototype.hasOwnProperty.call(swalLocalInstance, methodName) &&
         typeof swalLocalInstance[methodName] === 'function'
       ) {
-        swalFunction[methodName] = (method => {
-          return (...args: Parameters<typeof Swal['fire']>) => {
-            return swalLocalInstance[method].call(swalLocalInstance, ...args);
-          };
-        })(methodName);
+        swalFunction[methodName] = swalLocalInstance[methodName].bind(swalLocalInstance);
       }
     }
 

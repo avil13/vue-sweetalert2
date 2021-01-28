@@ -4,10 +4,10 @@ import Swal from 'sweetalert2';
 
 import VueSweetalert2 from '../src';
 
-const factory = () => {
+const factory = (option = {}) => {
     const localVue = createLocalVue();
 
-    localVue.use(VueSweetalert2);
+    localVue.use(VueSweetalert2, option);
 
     return localVue;
 };
@@ -26,23 +26,40 @@ function getAllMethodsNames(): string[][] {
 
 const allMethodsNames = getAllMethodsNames();
 
-describe('Vue-SweetAlert2 swal methods v.8.x', () => {
-    it.skip('should fire onOpen option key', () => {
-        const Vue = factory();
-        const onOpen = jest.fn();
+beforeAll(() => {
+  // jest (or more precisely, jsdom) doesn't implement `window.scrollTo` so we need to mock it
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  window.scrollTo = () => {}
+})
 
-        Vue.swal({
-            animation: false,
-            onOpen,
+describe('Vue-SweetAlert2 swal methods v.8.x', () => {
+    it.skip('should fire onOpen option key', async () => {
+        const Vue = factory({ title: 'Test title'});
+        const didOpenMock = jest.fn();
+
+        await Vue.swal.fire({
+          showClass: {
+            popup: '',
+            container: ''
+          },
+          didOpen: () => {
+            Vue.swal.clickConfirm();
+            didOpenMock();
+          }
         });
 
-        // TODO: add global window mock
-        expect(onOpen).toBeCalled();
+        expect(didOpenMock).toBeCalled();
     });
 
-    it.each(allMethodsNames)('should check methods', method => {
+    it.each(allMethodsNames)('should check methods "%s"', method => {
         const Vue = factory();
 
         expect(Vue.swal[method]).toBeTruthy();
     });
+
+    it('isLoading()', () => {
+      const Vue = factory();
+
+      expect(typeof Vue.swal.isLoading).toBe('function');
+    })
 });
