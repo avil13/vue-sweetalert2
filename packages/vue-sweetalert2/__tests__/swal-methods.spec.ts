@@ -33,23 +33,23 @@ beforeAll(() => {
 })
 
 describe('Vue-SweetAlert2 swal methods v.8.x', () => {
-    it.skip('should fire onOpen option key', async () => {
-        const Vue = factory({ title: 'Test title'});
-        const didOpenMock = jest.fn();
+    // it.skip('should fire onOpen option key', async () => {
+    //     const Vue = factory({ title: 'Test title'});
+    //     const didOpenMock = jest.fn();
 
-        await Vue.swal.fire({
-          showClass: {
-            popup: '',
-            container: ''
-          },
-          didOpen: () => {
-            Vue.swal.clickConfirm();
-            didOpenMock();
-          }
-        });
+    //     await Vue.swal.fire({
+    //       showClass: {
+    //         popup: '',
+    //         container: ''
+    //       },
+    //       didOpen: () => {
+    //         Vue.swal.clickConfirm();
+    //         didOpenMock();
+    //       }
+    //     });
 
-        expect(didOpenMock).toBeCalled();
-    });
+    //     expect(didOpenMock).toBeCalled();
+    // });
 
     it.each(allMethodsNames)('should check methods "%s"', method => {
         const Vue = factory();
