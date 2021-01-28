@@ -1,6 +1,6 @@
 {
   "name": "vue-sweetalert2",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "description": "Simple Vue sweetalert2 package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
