@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.0.0-rc.1",
-    "vue-sweetalert2": "^4.1.1"
+    "vue-sweetalert2": "^4.2.0"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.1",
