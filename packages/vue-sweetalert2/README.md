@@ -177,4 +177,19 @@ Or pass in global options like this:
 }
 ```
 
+### Using a different theme in Nuxt
+
+Add `vue-sweetalert2/nuxt` to modules section of `nuxt.config.js`
+
+```js
+{
+  // Before doing so, install the "@sweetalert2/theme-dark"
+  css:     [ '@sweetalert2/theme-dark' ],
+  modules: ['vue-sweetalert2/nuxt/no-css'];
+}
+```
+
+
+
+
 ## The documentation for `sweetalert2`, you can find [here](https://sweetalert2.github.io/).
