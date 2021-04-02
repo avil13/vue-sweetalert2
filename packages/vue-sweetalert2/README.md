@@ -145,6 +145,13 @@ $swal2-background: #990000;
 @import '~sweetalert2/src/sweetalert2';
 ```
 
+## Vuex
+
+Demo of using this library with the **Vuex Actions** can be found [HERE.](https://github.com/Uraharadono/CallbackFromVuexAction/blob/master/README.md "HERE.") 
+
+This demo shows a simple pattern that enables you to call `vue-sweetalert2` from Vuex Actions without breaking state pattern. 
+
+
 ## Nuxt.js
 
 Install dependencies:
