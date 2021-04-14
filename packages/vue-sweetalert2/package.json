@@ -1,10 +1,14 @@
 {
   "name": "vue-sweetalert2",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "description": "Simple Vue sweetalert2 package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["src", "nuxt", "dist"],
+  "files": [
+    "src",
+    "nuxt",
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p .",
     "test": "jest --runInBand",
@@ -17,7 +21,13 @@
     "lint:ts": "tsc --noEmit --skipLibCheck",
     "lint": "npm run lint:prettier && npm run lint:ts"
   },
-  "keywords": ["sweetalert", "sweetalert2", "alert", "prompt", "ssr"],
+  "keywords": [
+    "sweetalert",
+    "sweetalert2",
+    "alert",
+    "prompt",
+    "ssr"
+  ],
   "author": "Aleksey Pivkin @avil13",
   "license": "MIT",
   "dependencies": {
@@ -29,13 +39,19 @@
     "url": "git+https://github.com/avil13/vue-sweetalert2.git"
   },
   "nodemonConfig": {
-    "watch": ["src"],
+    "watch": [
+      "src"
+    ],
     "exec": "npm run prepublish",
     "delay": 2500
   },
   "lint-staged": {
-    "*.{js,html,vue,md,json}": ["npm run lint:prettier"],
-    "*.{ts}": ["npm run lint:prettier && npm run lint:ts"]
+    "*.{js,html,vue,md,json}": [
+      "npm run lint:prettier"
+    ],
+    "*.{ts}": [
+      "npm run lint:prettier && npm run lint:ts"
+    ]
   },
   "husky": {
     "hooks": {
