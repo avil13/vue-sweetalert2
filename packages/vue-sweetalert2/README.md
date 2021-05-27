@@ -34,8 +34,8 @@ Also, it is better to do it to get feedback faster, and be closer to the documen
 
 ### Basics
 
+#### Bash
 ```bash
-# bash
 npm install -S vue-sweetalert2
 ```
 
