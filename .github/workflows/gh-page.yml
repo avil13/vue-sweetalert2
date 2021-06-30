@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
           registry-url: https://registry.npmjs.org/
 
         # Проверяем изменилась ли версия
@@ -28,8 +28,8 @@ jobs:
       - name: Install and Build - ⌛&🏗️
         if: ${{ env.NEED_PUBLISH }}
         run: |
-          npm i
-          npm run build
+          yarn install
+          yarn build
 
       - name: Deploy 🚀.🚀.🚀
         if: ${{ env.NEED_PUBLISH }}
