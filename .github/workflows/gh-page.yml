@@ -28,7 +28,7 @@ jobs:
       - name: Install and Build - ⌛&🏗️
         if: ${{ env.NEED_PUBLISH }}
         run: |
-          npm ci
+          npm i
           npm run build
 
       - name: Deploy 🚀.🚀.🚀

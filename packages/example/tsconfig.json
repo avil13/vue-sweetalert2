@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2019",
     "lib": [
       "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
       "es7",
       "es6",
       "dom"
@@ -20,12 +23,12 @@
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "sourceMap": true,
-    "types": [
-      "vue-sweetalert2"
-    ],
-    "rootDir": "./src"
+    "paths": {
+      "vue-sweetaler2": [
+        "../vue-sweetalert2/"
+      ]
+    }
   },
   "include": [
     "./src/*.vue",

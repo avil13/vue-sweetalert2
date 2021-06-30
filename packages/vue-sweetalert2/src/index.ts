@@ -1,6 +1,5 @@
 import {SweetAlertOptions} from 'sweetalert2';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
-import Vue from 'vue';
 
 type TVueSwalInstance = typeof Swal & typeof Swal.fire;
 
@@ -9,13 +8,13 @@ declare module 'vue/types/vue' {
     $swal: TVueSwalInstance;
   }
 
-  interface VueConstructor<V extends Vue = Vue> {
+  interface VueConstructor {
     swal: TVueSwalInstance;
   }
 }
 
 class VueSweetalert2 {
-  static install(vue: Vue | any, options: SweetAlertOptions = {}): void {
+  static install(vue: any, options: SweetAlertOptions = {}): void {
     const swalLocalInstance: typeof Swal = Swal.mixin(options);
 
     const swalFunction = function(...args: Parameters<typeof Swal['fire']>) {
