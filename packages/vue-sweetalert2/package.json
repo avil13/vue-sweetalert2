@@ -1,9 +1,9 @@
 {
   "name": "vue-sweetalert2",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Simple Vue sweetalert2 package",
   "main": "dist/vue-sweetalert.cjs.js",
-  "module": "dist/vue-sweetalert.esm.js",
+  "module": "dist/vue-sweetalert.es.js",
   "browser": "dist/vue-sweetalert.umd.js",
   "types": "dist/index.d.ts",
   "files": [
