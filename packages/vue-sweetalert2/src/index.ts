@@ -18,22 +18,20 @@ class VueSweetalert2 {
   static install(vue: Vue | any, options: SweetAlertOptions = {}): void {
     const swalLocalInstance: typeof Swal = Swal.mixin(options);
 
-    const swalFunction = (...args: Parameters<typeof Swal['fire']>) => {
+    const swalFunction = function(...args: Parameters<typeof Swal['fire']>) {
       return swalLocalInstance.fire.call(swalLocalInstance, ...args);
     };
 
     Object.assign(swalFunction, Swal);
 
-    let methodName: string | number | symbol;
-
-    for (methodName in Swal) {
-      if (
-        Object.prototype.hasOwnProperty.call(swalLocalInstance, methodName) &&
-        typeof swalLocalInstance[methodName] === 'function'
-      ) {
+    Object.keys(Swal)
+      //@ts-ignore
+      .filter(key => typeof Swal[key] === 'function')
+      .forEach(methodName => {
+        //@ts-ignore
         swalFunction[methodName] = swalLocalInstance[methodName].bind(swalLocalInstance);
-      }
-    }
+      })
+
 
     // add the instance method
     if (vue.config?.globalProperties && !vue.config.globalProperties.$swal) {

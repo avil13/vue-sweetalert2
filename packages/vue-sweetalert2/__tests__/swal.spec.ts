@@ -1,4 +1,3 @@
-import 'jest';
 import { mount, createLocalVue } from '@vue/test-utils';
 
 import VueSweetalert2 from '../src';

@@ -56,7 +56,7 @@ module.exports = {
     globals: {
         'ts-jest': {
             tsconfig: 'tsconfig.json',
-            diagnostics: true,
+            diagnostics: false,
         },
         'vue-jest': {
             babelConfig: false,
@@ -128,7 +128,7 @@ module.exports = {
     // snapshotSerializers: [],
 
     // The test environment that will be used for testing
-    // testEnvironment: "jest-environment-jsdom",
+    testEnvironment: "jsdom",
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},

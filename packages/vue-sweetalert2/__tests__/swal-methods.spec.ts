@@ -16,8 +16,8 @@ const factory = (option = {}) => {
  * Return list of all methods name in array: [ ['methodName'] ]
  * need for each list methods testing
  */
-function getAllMethodsNames(): string[][] {
-    const keys = Object.keys(Swal);
+function getAllMethodsNames(): (keyof typeof Swal)[][] {
+    const keys = Object.keys(Swal) as (keyof typeof Swal)[];
 
     return keys
         .filter(name => typeof Swal[name] === 'function')
