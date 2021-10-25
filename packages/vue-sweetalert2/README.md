@@ -6,6 +6,8 @@
 
 Vue.js wrapper for SweetAlert2. With support SSR.
 
+[changelog](https://github.com/avil13/vue-sweetalert2/blob/master/packages/vue-sweetalert2/CHANGELOG.md)
+
 ---
 
 ## Attention:
