@@ -11,10 +11,10 @@
     "vue-sweetalert2": "^5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.0.5",
-    "typescript": "^4.3.2",
-    "vite": "^2.3.8",
-    "vue-tsc": "^0.0.24"
+    "@vitejs/plugin-vue": "^2.1.0",
+    "@vue/compiler-sfc": "^3.2.29",
+    "typescript": "^4.5.5",
+    "vite": "^2.7.13",
+    "vue-tsc": "^0.31.2"
   }
 }

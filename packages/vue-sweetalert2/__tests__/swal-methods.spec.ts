@@ -1,8 +1,9 @@
-import 'jest';
 import {createLocalVue} from '@vue/test-utils';
 import Swal from 'sweetalert2';
 
 import VueSweetalert2 from '../src';
+
+import { describe, it, expect, beforeAll } from 'vitest';
 
 const factory = (option = {}) => {
     const localVue = createLocalVue();

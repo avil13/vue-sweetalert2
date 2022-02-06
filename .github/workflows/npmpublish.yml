@@ -18,8 +18,8 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - run: yarn
+          node-version: 14
+      - run: yarn install --frozen-lockfile
       - run: yarn test
 
   publish-npm:
@@ -29,13 +29,13 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
           registry-url: https://registry.npmjs.org/
         # Проверяем изменилась ли версия
       - name: Set NEED_PUBLISH
         run: echo "NEED_PUBLISH=$(./need-publish.sh)" >> $GITHUB_ENV
 
-      - run: yarn
+      - run: yarn install --frozen-lockfile
         if: ${{ env.NEED_PUBLISH }}
 
       - run: yarn publish

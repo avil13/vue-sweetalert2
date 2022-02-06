@@ -1,7 +1,7 @@
-import { mount, createLocalVue } from '@vue/test-utils';
-
-import VueSweetalert2 from '../src';
+import { createLocalVue, mount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import { CreateElement } from 'vue';
+import VueSweetalert2 from '../src';
 
 const factory = () => {
   const localVue = createLocalVue();
