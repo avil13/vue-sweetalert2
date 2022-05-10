@@ -22,7 +22,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "sourceMap": true,
-    "types": ["node", "jest"],
+    "types": ["node"],
     "paths": {
         "@/*": [
           "packages/vue-sweetalert2/src/*"

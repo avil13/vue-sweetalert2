@@ -2,6 +2,7 @@
 
 import { defineConfig } from 'vite';
 
+//@ts-ignore
 const isDev = process.env.IS_DEV === 'dev';
 
 // https://vitejs.dev/config/

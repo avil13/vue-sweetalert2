@@ -3,6 +3,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 type TVueSwalInstance = typeof Swal & typeof Swal.fire;
 
+//@ts-ignore
 declare module 'vue/types/vue' {
   interface Vue {
     $swal: TVueSwalInstance;
