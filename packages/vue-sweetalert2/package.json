@@ -16,11 +16,12 @@
     "test": "vitest run",
     "test:watch": "vitest --watch",
     "test:coveralls": "vitest run --coverage && cat ./coverage/lcov.info | coveralls",
-    "changelog": "auto-changelog git add ./CHANGELOG.md",
     "prepublishOnly": "npm run test && npm run build && npm run changelog",
     "lint:prettier": "prettier --write src/*.ts",
     "lint:ts": "tsc --noEmit --skipLibCheck",
-    "lint": "npm run lint:prettier && npm run lint:ts"
+    "lint": "npm run lint:prettier && npm run lint:ts",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "version": "npm run changelog && git add CHANGELOG.md"
   },
   "keywords": [
     "sweetalert",
@@ -40,7 +41,7 @@
     "watch": [
       "src"
     ],
-    "exec": "npm run prepublish",
+    "exec": "npm run prepublishOnly",
     "delay": 2500
   },
   "dependencies": {
@@ -51,7 +52,7 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.3.0",
-    "auto-changelog": "^2.4.0",
+    "conventional-changelog-cli": "^2.2.2",
     "jsdom": "^19.0.0",
     "vite": "^2.9.8",
     "vitest": "^0.12.3",

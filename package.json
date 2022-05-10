@@ -1,8 +1,0 @@
-{
-  "name": "vue-sweetalert2",
-  "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
-}
