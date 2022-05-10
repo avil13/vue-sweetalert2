@@ -1,6 +1,6 @@
 {
   "name": "vue-sweetalert2",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "Simple Vue sweetalert2 package",
   "main": "dist/vue-sweetalert.cjs.js",
   "module": "dist/vue-sweetalert.es.js",
@@ -53,8 +53,8 @@
     "@vue/test-utils": "^1.3.0",
     "auto-changelog": "^2.4.0",
     "jsdom": "^19.0.0",
-    "vite": "^2.7.13",
-    "vitest": "^0.2.7",
+    "vite": "^2.9.8",
+    "vitest": "^0.12.3",
     "vue": "*",
     "vue-template-compiler": "^2.6.14"
   }
