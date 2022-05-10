@@ -1,3 +1,13 @@
+## [5.0.6](https://github.com/avil13/vue-sweetalert2/compare/v5.0.4...v5.0.6) (2022-05-10)
+
+
+### Features
+
+* 5.0.5 update deps ([374ccb7](https://github.com/avil13/vue-sweetalert2/commit/374ccb74fab9794a604802dba733bf711585385e))
+* change changelog builder to conventional-changelog ([01420ea](https://github.com/avil13/vue-sweetalert2/commit/01420ea6bc8dce27d4182bccd122b50e08353f27))
+
+
+
 ## [5.0.5](https://github.com/avil13/vue-sweetalert2/compare/v5.0.4...v5.0.5) (2022-05-10)
 
 
