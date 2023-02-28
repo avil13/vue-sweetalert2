@@ -14,18 +14,7 @@ export default defineConfig({
       name: 'vueSweetalert',
       fileName: 'vue-sweetalert',
     },
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        ecma: 2015,
-      },
-      format: {
-        comments: false,
-        beautify: isDev,
-      },
-    },
+    minify: true,
     rollupOptions: {
       // external: /^lit-element/,
     },
