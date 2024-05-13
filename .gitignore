@@ -24,3 +24,6 @@ coverage
 .npmrc
 
 dist
+.yalc
+yalc.lock
+
