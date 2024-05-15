@@ -8,10 +8,10 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "default": "./dist/vue-sweetalert.js",
       "import": "./dist/vue-sweetalert.mjs",
       "require": "./dist/vue-sweetalert.umd.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/vue-sweetalert.js"
     }
   },
   "files": [
