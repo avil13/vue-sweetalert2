@@ -1,6 +1,6 @@
 {
   "name": "vue-sweetalert2",
-  "version": "5.0.9",
+  "version": "5.0.10",
   "description": "Simple Vue sweetalert2 package",
   "main": "dist/vue-sweetalert.js",
   "module": "dist/vue-sweetalert.mjs",
@@ -28,7 +28,8 @@
     "lint:ts": "tsc --noEmit --skipLibCheck",
     "lint": "npm run lint:prettier && npm run lint:ts",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "version": "npm run changelog && git add CHANGELOG.md"
+    "version": "npm run changelog && git add CHANGELOG.md",
+    "prepublishOnly": "npm test && npm run build"
   },
   "keywords": [
     "sweetalert",
