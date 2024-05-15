@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.4.27",
-    "vue-sweetalert2": "^5"
+    "vue-sweetalert2": "5.*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
