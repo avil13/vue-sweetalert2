@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 20
           registry-url: https://registry.npmjs.org/
 
         # Проверяем изменилась ли версия
@@ -28,14 +28,14 @@ jobs:
       - name: Install and Build - ⌛&🏗️
         if: ${{ env.NEED_PUBLISH }}
         run: |
-          yarn install --frozen-lockfile
-          yarn run build
+          npm i
+          npm run build
 
-      - name: Deploy 🚀.🚀.🚀
-        if: ${{ env.NEED_PUBLISH }}
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: packages/example/dist # The folder the action should deploy.
-          CLEAN: true
+      # - name: Deploy 🚀.🚀.🚀
+      #   if: ${{ env.NEED_PUBLISH }}
+      #   uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      #     BRANCH: gh-pages # The branch the action should deploy to.
+      #     FOLDER: packages/example/dist # The folder the action should deploy.
+      #     CLEAN: true
